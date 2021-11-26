@@ -1,0 +1,26 @@
+{
+  "name": "justfurpets",
+  "version": "1.0.0",
+  "description": "project2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sistaniabong/justFurPets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sistaniabong/justFurPets/issues"
+  },
+  "homepage": "https://github.com/sistaniabong/justFurPets#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.0-alpha.1"
+  }
+}
