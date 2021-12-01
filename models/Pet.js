@@ -34,7 +34,8 @@ Pet.init(
     },
     boarded: {
       type: DataTypes.BOOLEAN,
-      defaultValue: false,
+      //Reach: Anyway we can have the business chose the defaule here based off their business?
+      defaultValue: true,
       allowNull: false
     },
     check_in_date: {
@@ -45,9 +46,9 @@ Pet.init(
       type: DataTypes.DATEONLY,
       allowNull: false
     },
-    duration_of_stay: {
+    //Who wants to figure out how to make this automatically calculate as a hook?
+    stayDuration: {
       type: DataTypes.INTEGER,
-      defaultValue: false,
       allowNull: false
     },
     kennel_size: {
