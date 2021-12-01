@@ -1,10 +1,9 @@
 const sequelize = require('../config/connection');
 const { Pet, PetOwner, ScheduledActivity } = require('../models');
 
-const petData = require('./userData.json');
-const petOwnerData = require('./projectData.json');
+const petData = require('./petData.json');
+const petOwnerData = require('./petOwnerData.json');
 const scheduledActivityData = require('./scheduledActivityData.json');
-const sequelize = require('../config/connection');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });

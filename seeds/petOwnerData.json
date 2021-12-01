@@ -1,17 +1,32 @@
 [
   {
-    "name": "Sal",
-    "email": "sal@hotmail.com",
-    "password": "password12345"
+    "activity_type": "AM walk",
+    "activity_description": "Take Gooby for a 5 minutes walk to stretch her legs.",
+    "time": "8:00AM",
+    "pet_id": 1
   },
   {
-    "name": "Lernantino",
-    "email": "lernantino@gmail.com",
-    "password": "password12345"
+    "activity_type": "AM Medicine",
+    "activity_description": "Give Oprah her one tablet of Xanax for her nerves.",
+    "time": "6:00AM",
+    "pet_id": 3
   },
   {
-    "name": "Amiko",
-    "email": "amiko2k20@aol.com",
-    "password": "password12345"
+    "activity_type": "PM Walk",
+    "activity_description": "Take Simon and Garfunkel for their walk together",
+    "time": "5:00PM",
+    "pet_id": 4
+  },
+  {
+    "activity_type": "PM Walk",
+    "activity_description": "Take Simon and Garfunkel for their walk together",
+    "time": "5:00PM",
+    "pet_id": 5
+  },
+  {
+    "activity_type": "Momo's Morning Feeding",
+    "activity_description": "Feed Momo one mango.",
+    "time": "7:30PM",
+    "pet_id": 2
   }
 ]
