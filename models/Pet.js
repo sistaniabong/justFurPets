@@ -28,7 +28,7 @@ Pet.init(
       allowNull: false,
       references: 
       {
-        model: 'pet',
+        model: 'petOwner',
         key: 'id',
       }
     },
