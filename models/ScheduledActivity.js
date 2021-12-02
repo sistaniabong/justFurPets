@@ -24,7 +24,7 @@ ScheduledActivity.init(
       allowNull: false,
     },
     pet_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: 
       {
