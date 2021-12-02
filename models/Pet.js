@@ -48,7 +48,7 @@ Pet.init(
     },
     //Who wants to figure out how to make this automatically calculate as a hook?
     stay_duration: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     kennel_size: {

@@ -20,7 +20,7 @@ ScheduledActivity.init(
       allowNull: false
     },
     time: {
-      type: DataTypes.TIME,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     pet_id: {
