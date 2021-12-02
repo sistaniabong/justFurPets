@@ -5,8 +5,19 @@ const { Pet } = require('../../models');
 router.get('/', async (req, res) => {
   // find all pets
   try {
-    const petData = await Pet.findAll();
-    res.status(200).json(petData);              
+    const hasQuery = Object.keys(req.query).length > 0;
+    // filter the pet by pet_type (dog, cat, bird, others)
+    if (hasQuery) {
+      const petData = await Pet.findAll({
+        where: {
+          pet_type: req.query.pet_type
+        },
+      });
+      res.status(200).json(petData);
+    }else{
+      const petData = await Pet.findAll();
+      res.status(200).json(petData);
+    }
   } catch (err) {
     res.status(500).json(err);
   }
@@ -32,7 +43,7 @@ router.post('/', async (req, res) => {
     }
   });
 
-  router.put('/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
     // update a tag's name by its `id` value
     try {
       const petData = await Pet.update(
@@ -64,4 +75,21 @@ router.post('/', async (req, res) => {
     }
   });
 
-  module.exports = router;
+
+router.delete('/:id', (req, res) => {
+  // delete a category by its `id` value
+  try{
+    Pet.destroy({
+      where: {
+        id: req.params.id,
+      },
+    })
+      .then((deletedCategory) => {
+        res.json(deletedCategory);
+      })
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+module.exports = router;
