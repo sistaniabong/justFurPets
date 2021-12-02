@@ -7,7 +7,7 @@
     "boarded": true,
     "check_in_date": "2021-01-14",
     "check_out_date": "2021-01-16",
-    "stay_Duration": 5,
+    "stay_duration": 5,
     "kennel_size": "s"
   },
   {
@@ -18,7 +18,7 @@
     "boarded": false,
     "check_in_date": "2021-01-15",
     "check_out_date": "2021-01-16",
-    "stay_Duration": 1,
+    "stay_duration": 1,
     "kennel_size": "l"
   },
   {
@@ -29,7 +29,7 @@
     "boarded": true,
     "check_in_date": "2021-01-16",
     "check_out_date": "2021-01-23",
-    "stay_Duration": 7,
+    "stay_duration": 7,
     "kennel_size": "m"
   },
   {
@@ -40,18 +40,18 @@
     "boarded": true,
     "check_in_date": "2021-01-16",
     "check_out_date": "2021-01-30",
-    "stay_Duration": 14,
+    "stay_duration": 14,
     "kennel_size": "s"
   },
   {
-    "pet_name": "Garfucnkel",
+    "pet_name": "Garfunkel",
     "pet_type": "bird",
     "pet_species": "Parrot",
     "pet_owner_id": 4,
     "boarded": true,
     "check_in_date":"2021-01-16",
     "check_out_date": "2021-01-22",
-    "stay_Duration": 14,
+    "stay_duration": 14,
     "kennel_size": "s"
   }
 ]
