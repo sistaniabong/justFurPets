@@ -46,3 +46,32 @@ body {
     margin: auto;
     background-color: #a4cdd4;
 }
+
+#toolbar {
+    display: flex;
+    background-color: #e48365; 
+    color: black;
+} 
+
+#toolbar h1{
+    margin:10px 0px 0px 0px;
+}
+
+#toolbarOpts{
+    display: flex; 
+    justify-content: space-between; 
+    list-style-type: none; 
+    font-size: 25px; 
+    text-decoration: none;
+    padding-top: 30px;
+}
+
+#toolbarOpts a{
+    color:black;
+    margin-right: 35px;
+}
+
+#toolbar img{
+    height: 50px;
+    margin: 15px ;
+}
