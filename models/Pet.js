@@ -24,7 +24,7 @@ Pet.init(
       allowNull: true,
     },
     pet_owner_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: 
       {
@@ -47,8 +47,8 @@ Pet.init(
       allowNull: false
     },
     //Who wants to figure out how to make this automatically calculate as a hook?
-    stayDuration: {
-      type: DataTypes.INTEGER,
+    stay_duration: {
+      type: DataTypes.STRING,
       allowNull: false
     },
     kennel_size: {
