@@ -1,0 +1,32 @@
+[
+  {
+    "activity_type": "AM walk",
+    "activity_description": "Take Gooby for a 5 minutes walk to stretch her legs.",
+    "time": "8:00",
+    "pet_id": 1
+  },
+  {
+    "activity_type": "AM Medicine",
+    "activity_description": "Give Oprah her one tablet of Xanax for her nerves.",
+    "time": "6:00",
+    "pet_id": 3
+  },
+  {
+    "activity_type": "PM Walk",
+    "activity_description": "Take Simon and Garfunkel for their walk together",
+    "time": "17:00",
+    "pet_id": 4
+  },
+  {
+    "activity_type": "PM Walk",
+    "activity_description": "Take Simon and Garfunkel for their walk together",
+    "time": "17:00",
+    "pet_id": 5
+  },
+  {
+    "activity_type": "Momo's Morning Feeding",
+    "activity_description": "Feed Momo one mango.",
+    "time": "19:30",
+    "pet_id": 2
+  }
+]
