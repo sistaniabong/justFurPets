@@ -1,0 +1,48 @@
+
+<div class="container allpets">
+    <div class="dropdown">
+        <button class="btn btn-info dropdown-toggle" id="viewpetBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pet Type
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/api/pet/">All</a>
+            <a class="dropdown-item" href="/api/pet?pet_type=dog">Dog</a>
+            <a class="dropdown-item" href="/api/pet?pet_type=cat">Cat</a>
+            <a class="dropdown-item" href="/api/pet?pet_type=bird">Bird</a>
+            <a class="dropdown-item" href="/api/pet?pet_type=others">Others</a>
+        </div>
+    </div>
+  <div class="row">
+    <div class="col-12">
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Owner Name</th>
+                    <th scope="col">Check-in Date</th>
+                    <th scope="col">Check-out Date</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop over each pet object in the pets array -->
+                {{#each pets as |pet|}}
+                <tr class="table-light">
+                <th scope="row">{{pet.id}}</th>
+                <td>{{pet.pet_name}}</td>
+                <td>{{pet.pet_type}}</td>
+                <td>{{pet.petOwner.owner_name}}</td>
+                <td>{{pet.check_in_date}}</td>
+                <td>{{pet.check_in_date}}</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" id="viewpetBtn" href="/api/pet/{{pet.id}}" role="button">View Pet</a>
+                </td>
+                </tr>
+                 {{/each}}
+            </tbody>
+        </table>
+        </div>
+  </div>
+</div>
