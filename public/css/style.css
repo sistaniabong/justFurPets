@@ -4,6 +4,8 @@ html {
 }
 body {
     margin: 0;
+    background-image:url('https://st3.depositphotos.com/3058647/14243/v/450/depositphotos_142432659-stock-illustration-animal-paw-seamless-gray-pattern.jpg'); 
+    background-size: contain;
 }
 
 #homepage{
@@ -17,6 +19,7 @@ body {
     height: 100%;
 }
 
+
 #homepage #title{
     font-family: sans-serif;
     font-size: 100px;
@@ -25,8 +28,7 @@ body {
     background-color: #e48365;
     border-top: 3px solid black;
     border-bottom: 3px solid black;
-    
-    
+       
 }
 
 #homepage #petsBtn{
@@ -46,6 +48,7 @@ body {
     margin: auto;
     background-color: #a4cdd4;
 }
+
 
 #createPage
 {
@@ -80,4 +83,16 @@ margin: 50px 300px 50px 300px;
     height:auto;
     width: 150px;
     align-self: center;
+
+/* css styles for view all pets page */
+.allpets {
+    margin-top:30px;
+}
+
+#viewpetBtn {
+    background-color: #e48365;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #e48365;
+
 }

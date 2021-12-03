@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Pet } = require('../../models');
+const { Pet, PetOwner } = require('../../models');
 
 
 router.get('/', async (req, res) => {
@@ -8,15 +8,38 @@ router.get('/', async (req, res) => {
     const hasQuery = Object.keys(req.query).length > 0;
     // filter the pet by pet_type (dog, cat, bird, others)
     if (hasQuery) {
-      const petData = await Pet.findAll({
+      const petsData = await Pet.findAll({
         where: {
           pet_type: req.query.pet_type
         },
+        include: [
+          {
+            model: PetOwner,
+            attributes: ['owner_name','phone_number'],
+          },
+        ],
       });
-      res.status(200).json(petData);
+      // res.status(200).json(petsData);
+      const pets = petsData.map((pet) => pet.get({ plain: true }));
+      res.render('allpets', { 
+        pets
+        // logged_in: req.session.logged_in 
+      });
     }else{
-      const petData = await Pet.findAll();
-      res.status(200).json(petData);
+      const petsData = await Pet.findAll({
+        include: [
+          {
+            model: PetOwner,
+            attributes: ['owner_name','phone_number'],
+          },
+        ],
+      });
+
+      const pets = petsData.map((pet) => pet.get({ plain: true }));
+      res.render('allpets', { 
+        pets
+        // logged_in: req.session.logged_in 
+      });
     }
   } catch (err) {
     res.status(500).json(err);
