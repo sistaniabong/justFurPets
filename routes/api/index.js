@@ -11,5 +11,3 @@ router.use('/petOwner', petOwnerRoute);
 router.use('/users', userRoutes);
 
 module.exports = router;
-
-

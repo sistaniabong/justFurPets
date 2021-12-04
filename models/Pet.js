@@ -39,11 +39,11 @@ Pet.init(
       allowNull: false
     },
     check_in_date: {
-      type: DataTypes.DATEONLY,
+      type: DataTypes.STRING,
       allowNull: false
     },
     check_out_date: {
-      type: DataTypes.DATEONLY,
+      type: DataTypes.STRING,
       allowNull: false
     },
     //Who wants to figure out how to make this automatically calculate as a hook?
