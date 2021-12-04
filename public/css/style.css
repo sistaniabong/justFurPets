@@ -104,7 +104,8 @@ body {
 }
 
 #createPage .customprepend{
-    font-size: 60px;
+    font-size: 20px;
+    height:auto;
 }
 
 #createPage #inputs
@@ -117,6 +118,7 @@ margin: 50px 300px 50px 300px;
     height:auto;
     width: 150px;
     align-self: center;
+    font-size: 20px;
 }
 
 /* css styles for view all pets page */
@@ -129,6 +131,4 @@ margin: 50px 300px 50px 300px;
     border-radius: 5px;
     border-style: solid;
     border-color: #e48365;
-
 }
-
