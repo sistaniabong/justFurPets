@@ -6,7 +6,9 @@ router.get('/', async (req, res) => {
   // find all pet owners
   try {
       const petOwnerData = await PetOwner.findAll();
-      res.status(200).json(petOwnerData);
+      console.log(petOwnerData);
+      const petOwners = petOwnerData.map((petOwner) => petOwner.get({ plain: true }));
+      res.status(200).json(petOwners);             
     }
   catch (err) {
     res.status(500).json(err);
