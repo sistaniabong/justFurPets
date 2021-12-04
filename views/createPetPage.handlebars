@@ -1,5 +1,5 @@
 <html>
-<div id="createPage">
+ <div id="createPage">
     <p id="title">Create a new pet</p>
     <div id='inputs'>
         <div class="input-group mb-3">
@@ -18,12 +18,12 @@
                 <option value="cat">Cat</option>
                 <option value="dog">Dog</option>
                 <option value="bird">Bird</option>
-                <option value="other">Other</option>
+                <option value="other">Others</option>
             </select>
         </div>
         <div class="input-group mb-3">
-            <div class="input-group-prepend customprepend">
-                <span class="input-group-text" id="inputGroup-sizing-default">Pet's Species:</span>
+            <div class="input-group-prepend ">
+                <span class="input-group-text customprepend" id="inputGroup-sizing-default">Pet's Species:</span>
             </div>
             <input type="text" class="form-control" aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-default">
@@ -38,7 +38,7 @@
                 <option value="dog">Owner1</option>
                 <option value="bird">Owner1</option>
                 <option value="other">Owner1</option>
-                <option value="other">Create a new Owner</option>
+                <option value="create" id='createModal' >Create a new Owner</option>
             </select>
         </div>
         <div class="input-group mb-3">
@@ -91,5 +91,7 @@
     </div>
     <button type="button" class="btn btn-dark createPetSubmit">Submit</button>
 </div>
-
 </html>
+   <script src="../public/createPetPageScript.js"></script>
+
+
