@@ -16,6 +16,20 @@ router.get('/create', async(req,res) => {
     }
 });
 
+router.get('/login', (req, res) => {
+    // TODO: Add a comment describing the functionality of this if statement
+    if (req.session.logged_in) {
+      res.redirect('/');
+      return;
+    }
+  
+    res.render('login');
+  });
+
+router.get('/signuppage', async (req, res) => {
+  res.render('signup');
+});
+
 router.get('api/pet', async(req,res) => {
     try {
         res.render('allpets')
