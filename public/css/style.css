@@ -41,6 +41,20 @@ body {
     background-color: #a4cdd4;
 }
 
+#petsBtn a{
+    color:black;
+}
+
+#petsBtn a:hover{
+    text-decoration: none;
+}
+
+#petsBtn:hover{
+    background-color: #4f8f91 !important;
+    box-shadow: 1px 1px 15px 1px rgb(97, 97, 97);
+}
+
+
 #homepage #loginBtn{
     font-size: 20px;
     max-width: 150px;
