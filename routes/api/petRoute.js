@@ -46,6 +46,10 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/createPet', async (req, res) => {
+  res.render('createPage');
+});
+
 router.get('/:id', async (req, res) => {
   // find all pets
   try {
