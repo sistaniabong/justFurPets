@@ -41,16 +41,16 @@ body {
     background-color: #a4cdd4;
 }
 
-#petsBtn a{
+#petsBtn a, #loginBtn a{
     color:black;
 }
 
-#petsBtn a:hover{
+#petsBtn a:hover, #loginBtn a:hover{
     text-decoration: none;
 }
 
-#petsBtn:hover{
-    background-color: #4f8f91 !important;
+#petsBtn:hover, #loginBtn:hover{
+    background-color: #6fc4c7 !important;
     box-shadow: 1px 1px 15px 1px rgb(97, 97, 97);
 }
 
