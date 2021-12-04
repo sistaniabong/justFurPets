@@ -16,5 +16,12 @@ router.get('/create', async(req,res) => {
     }
 });
 
+router.get('api/pet', async(req,res) => {
+    try {
+        res.render('allpets')
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 module.exports = router;
