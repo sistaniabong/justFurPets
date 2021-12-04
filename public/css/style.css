@@ -132,3 +132,7 @@ margin: 50px 300px 50px 300px;
 
 }
 
+.center{
+    left: 40%;
+    position: relative;
+}
