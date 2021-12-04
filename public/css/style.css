@@ -50,6 +50,36 @@ body {
 }
 
 
+#toolbar {
+    display: flex;
+    background-color: #e48365; 
+    color: black;
+} 
+
+#toolbar h1{
+    margin:10px 0px 0px 0px;
+}
+
+#toolbarOpts{
+    display: flex; 
+    justify-content: space-between; 
+    list-style-type: none; 
+    font-size: 25px; 
+    text-decoration: none;
+    padding-top: 30px;
+}
+
+#toolbarOpts a{
+    color:black;
+    margin-right: 35px;
+}
+
+#toolbar img{
+    height: 50px;
+    margin: 15px ;
+}
+
+
 #createPage
 {
     margin:auto ;
@@ -83,6 +113,7 @@ margin: 50px 300px 50px 300px;
     height:auto;
     width: 150px;
     align-self: center;
+}
 
 /* css styles for view all pets page */
 .allpets {
@@ -96,3 +127,4 @@ margin: 50px 300px 50px 300px;
     border-color: #e48365;
 
 }
+

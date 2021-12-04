@@ -21,7 +21,21 @@
 </head>
 
 <body>
-
+  {{!-- This is the taskbar --}}
+  {{#if withAuth}} 
+   <header id = "toolbar">
+        <img src="https://cdn.onlinewebfonts.com/svg/img_74462.png">
+        <h1>JustFurPets</h1>
+        <nav>
+          <ul id = "toolbarOpts">
+            <li><a href="">View All Pets</a></li>
+            <li><a href="">Add a Pet</a></li>
+            <li><a href="">Logout</a></li>
+          </ul>
+        </nav>
+    </header>
+  {{/if}}
+  
   {{!-- <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
