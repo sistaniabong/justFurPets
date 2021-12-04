@@ -8,5 +8,13 @@ router.get('/', async(req,res) => {
     }
 });
 
+router.get('/create', async(req,res) => {
+    try {
+        res.render('createPetPage')
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 
 module.exports = router;
