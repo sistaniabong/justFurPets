@@ -22,7 +22,7 @@
 
 <body>
   {{!-- This is the taskbar --}}
-  {{#if withAuth}} 
+  {{#if logged_in}} 
    <header id = "toolbar">
         <img src="https://cdn.onlinewebfonts.com/svg/img_74462.png">
         <h1>JustFurPets</h1>
@@ -30,7 +30,7 @@
           <ul id = "toolbarOpts">
             <li><a href="">View All Pets</a></li>
             <li><a href="">Add a Pet</a></li>
-            <li><a href="">Logout</a></li>
+            <li id="logout"><a href="">Log Out</a></li>
           </ul>
         </nav>
     </header>
@@ -48,5 +48,5 @@
   </div> --}}
     {{{ body }}}
   </body>
-
+  <script src="/js/logout.js"></script>
 </html>
