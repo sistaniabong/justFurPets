@@ -1,7 +1,14 @@
 const router = require('express').Router();
 const { PetOwner } = require('../models');
+const withAuth = require('../utils/auth');
 
-router.get('/', async(req,res) => {
+router.get('/', withAuth, async(req,res) => {
+  if (req.session.logged_in) 
+  {
+    res.redirect('/api/pet');
+    return;
+  }
+  else
     try {
         res.render('homepage')
     } catch (err) {
