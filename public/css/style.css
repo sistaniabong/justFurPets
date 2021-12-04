@@ -103,6 +103,10 @@ body {
     border-bottom: 3px solid black;
 }
 
+#createPage .customprepend{
+    font-size: 60px;
+}
+
 #createPage #inputs
 {
 margin: 50px 300px 50px 300px;
