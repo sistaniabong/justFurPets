@@ -23,7 +23,7 @@
                     <th scope="col">Owner Name</th>
                     <th scope="col">Check-in Date</th>
                     <th scope="col">Check-out Date</th>
-                      {{#if withAuth}} 
+                    {{#if logged_in}} 
                     <th scope="col">Actions</th>
                     {{/if}}
                 </tr>
@@ -38,13 +38,13 @@
                 <td>{{pet.petOwner.owner_name}}</td>
                 <td>{{pet.check_in_date}}</td>
                 <td>{{pet.check_in_date}}</td>
-                 {{#if withAuth}} 
+                {{#if logged_in}} 
                 <td>
                     <a class="btn btn-primary btn-sm" id="viewpetBtn" href="/api/pet/{{pet.id}}" role="button">View Pet</a>
                 </td>
                 {{/if}}
                 </tr>
-                 {{/each}}
+                {{/each}}
             </tbody>
         </table>
         </div>
