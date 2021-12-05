@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Pet, PetOwner } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 
 router.get('/', async (req, res) => {
@@ -51,12 +52,24 @@ router.get('/createPet', async (req, res) => {
   res.render('createPage');
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   // find all pets
   try {
-    const petData = await Pet.findByPk(req.params.id);
-    res.status(200).json(petData);              
+    const petData = await Pet.findByPk(req.params.id,{
+      include: [
+        {
+          model: PetOwner,
+          attributes: ['owner_name','phone_number'],
+        },
+      ],
+    });
+      const pet = petData.get({ plain: true });
+      res.render('petDetails', { 
+        pet,
+        logged_in: req.session.logged_in 
+      });             
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });

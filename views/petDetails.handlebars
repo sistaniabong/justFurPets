@@ -1,0 +1,38 @@
+
+<div class="container allpets">
+  <div class="row">
+    <div class="col-12">
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Species</th>
+                    <th scope="col">Owner</th>
+                    <th scope="col">Boarded</th>
+                    <th scope="col">Check-in Date</th>
+                    <th scope="col">Check-out Date</th>
+                    <th scope="col">Stay Duration</th>
+                    <th scope="col">Kennel Size</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop over each pet object in the pets array -->
+                <tr class="table-light">
+                <th scope="row">{{pet.id}}</th>
+                <td>{{pet.pet_name}}</td>
+                <td>{{pet.pet_type}}</td>
+                <td>{{pet.pet_species}}</td>
+                <td>{{pet.petOwner.owner_name}}</td>
+                <td>{{pet.boarded}}</td>
+                <td>{{pet.check_in_date}}</td>
+                <td>{{pet.check_out_date}}</td>
+                <td>{{pet.stay_duration}} Days</td>
+                <td>{{pet.kennel_size}}</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+  </div>
+</div>
