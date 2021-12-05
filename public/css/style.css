@@ -41,6 +41,20 @@ body {
     background-color: #a4cdd4;
 }
 
+#petsBtn a, #loginBtn a{
+    color:black;
+}
+
+#petsBtn a:hover, #loginBtn a:hover{
+    text-decoration: none;
+}
+
+#petsBtn:hover, #loginBtn:hover{
+    background-color: #6fc4c7 !important;
+    box-shadow: 1px 1px 15px 1px rgb(97, 97, 97);
+}
+
+
 #homepage #loginBtn{
     font-size: 20px;
     max-width: 150px;
@@ -104,7 +118,8 @@ body {
 }
 
 #createPage .customprepend{
-    font-size: 60px;
+    font-size: 20px;
+    height:auto;
 }
 
 #createPage #inputs
@@ -117,6 +132,7 @@ margin: 50px 300px 50px 300px;
     height:auto;
     width: 150px;
     align-self: center;
+    font-size: 20px;
 }
 
 /* css styles for view all pets page */
@@ -129,6 +145,10 @@ margin: 50px 300px 50px 300px;
     border-radius: 5px;
     border-style: solid;
     border-color: #e48365;
-
 }
 
+
+.center{
+    left: 40%;
+    position: relative;
+}

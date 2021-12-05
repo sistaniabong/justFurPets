@@ -2,6 +2,7 @@
 const Pet = require('./Pet');
 const PetOwner = require('./PetOwner');
 const ScheduledActivity = require('./ScheduledActivity');
+const User = require('./User');
 
 PetOwner.hasMany(Pet, {
     foreignKey: 'pet_owner_id',
@@ -21,5 +22,5 @@ Pet.hasMany(ScheduledActivity, {
     onDelete: 'CASCADE'
 });
 
-module.exports = { Pet, ScheduledActivity, PetOwner };
+module.exports = { Pet, ScheduledActivity, PetOwner , User};
 
