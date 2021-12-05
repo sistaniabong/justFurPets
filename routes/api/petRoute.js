@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Pet, PetOwner } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 
 router.get('/', async (req, res) => {
@@ -51,12 +52,24 @@ router.get('/createPet', async (req, res) => {
   res.render('createPage');
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   // find all pets
   try {
-    const petData = await Pet.findByPk(req.params.id);
-    res.status(200).json(petData);              
+    const petData = await Pet.findByPk(req.params.id,{
+      include: [
+        {
+          model: PetOwner,
+          attributes: ['owner_name','phone_number'],
+        },
+      ],
+    });
+      const pet = petData.get({ plain: true });
+      res.render('petDetails', { 
+        pet,
+        logged_in: req.session.logged_in 
+      });             
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
@@ -74,12 +87,14 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
     // update a tag's name by its `id` value
     try {
+      const ownerData = await PetOwner.findOne({ where: { owner_name: req.body.pet_owner_id } });
+      console.log(ownerData.id)
       const petData = await Pet.update(
         {
           pet_name: req.body.pet_name,
           pet_type: req.body.pet_type,
           pet_species: req.body.pet_species,
-          pet_owner_id: req.body.pet_owner_id,
+          pet_owner_id: ownerData.id,
           boarded: req.body.boarded,
           check_in_date: req.body.check_in_date,
           check_out_date: req.body.check_out_date,
@@ -96,7 +111,6 @@ router.put('/:id', async (req, res) => {
         res.status(404).json({ message: 'No pet found with this id!' });
         return;
       }
-  
       res.status(200).json(petData);
     } catch (err) {
       res.status(500).json(err);
