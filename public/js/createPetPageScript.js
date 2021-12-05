@@ -19,7 +19,6 @@ createPetSubmitButton.addEventListener('click', () => {
   // console.log(newPetCheckIn.value)
   // console.log(newPetCheckOut.value)
   // console.log(newPetKennelSize.value)
-  console.log(newPetDuration.value)
   if (newPetOvernight.value=='1'){
   var boardedBoolean=true}
   else{

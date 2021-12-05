@@ -48,10 +48,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/createPet', async (req, res) => {
-  res.render('createPage');
-});
-
 router.get('/:id', withAuth, async (req, res) => {
   // find all pets
   try {
@@ -78,6 +74,7 @@ router.post('/', async (req, res) => {
     // create a new pet
     try {
       const petData = await Pet.create(req.body);
+      console.log(petData)
       res.status(200).json(petData);
     } catch (err) {
       res.status(400).json(err);
