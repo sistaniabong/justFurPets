@@ -22,9 +22,10 @@ router.get('/', async (req, res) => {
       // res.status(200).json(petsData);
       const pets = petsData.map((pet) => pet.get({ plain: true }));
       res.render('allpets', { 
-        pets
-        // logged_in: req.session.logged_in 
-      });
+        pets,
+        
+        logged_in: req.session.logged_in 
+      },);
     }else{
       const petsData = await Pet.findAll({
         include: [
@@ -37,8 +38,8 @@ router.get('/', async (req, res) => {
 
       const pets = petsData.map((pet) => pet.get({ plain: true }));
       res.render('allpets', { 
-        pets
-        // logged_in: req.session.logged_in 
+        pets,
+        logged_in: req.session.logged_in 
       });
     }
   } catch (err) {
