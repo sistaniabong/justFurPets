@@ -2,41 +2,34 @@
 <div class="container allpets">
   <div class="row">
     <div class="col-12">
-        <table class="table table-hover">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Type</th>
-                    <th scope="col">Species</th>
-                    <th scope="col">Owner</th>
-                    <th scope="col">Boarded</th>
-                    <th scope="col">Check-in Date</th>
-                    <th scope="col">Check-out Date</th>
-                    <th scope="col">Stay Duration</th>
-                    <th scope="col">Kennel Size</th>
-                    <th scope="col">Modify</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Loop over each pet object in the pets array -->
-                <tr class="table-light">
-                <th scope="row">{{pet.id}}</th>
-                <td>{{pet.pet_name}}</td>
-                <td>{{pet.pet_type}}</td>
-                <td>{{pet.pet_species}}</td>
-                <td>{{pet.petOwner.owner_name}}</td>
-                <td>{{pet.boarded}}</td>
-                <td>{{pet.check_in_date}}</td>
-                <td>{{pet.check_out_date}}</td>
-                <td>{{pet.stay_duration}} Days</td>
-                <td>{{pet.kennel_size}}</td>
-                <td>
-                    <button id="updatePet">Update</button>
-                </td>
-                </tr>
-            </tbody>
-        </table>
+        <div id="petProfile">
+        <h1 id="pPheader">{{pet.pet_name}}'s Profile</h1>
+        <div id=petData>
+            <div id="left-column">
+                <h3>Info:</h3>
+                <p><b>Owner's name:</b> {{pet.petOwner.owner_name}}</p>
+                <p><b>Owner's phone:</b> {{pet.petOwner.phone_number.[0]}}{{pet.petOwner.phone_number.[1]}}{{pet.petOwner.phone_number.[2]}}-{{pet.petOwner.phone_number.[3]}}{{pet.petOwner.phone_number.[4]}}{{pet.petOwner.phone_number.[5]}}-{{pet.petOwner.phone_number.[6]}}{{pet.petOwner.phone_number.[7]}}{{pet.petOwner.phone_number.[8]}}{{pet.petOwner.phone_number.[9]}}</p>
+                <p><b>Pet Type:</b> {{pet.pet_type}}</p>
+                <p><b>Species:</b>  {{pet.pet_species}}</p>
+                <p><b>Check-In Date:</b> {{pet.check_in_date}}</p>
+                <p><b>Check-out Date:</b> {{pet.check_out_date}}</p>
+                <p><b>Is Boarded:</b> {{pet.boarded}}</p>
+                <p><b>Kennel Size:</b> {{pet.kennel_size}}</p>
+            </div>
+            <div id="right-Column">
+                <h3>Activities:</h3>
+                {{!-- {{#each pet.scheduledActivity}} --}}
+                <p>{{pet.scheduledActivity.activityDescription}}</p>
+                {{!-- {{/each}} --}}
+            </div>
+
+        </div>
+        
+        <button id="updatePet">Edit Pet Data</button>
+        <button id="deletePet">Delete Pet</button>
+
+    </div>
+
         <table class="table table-hover modal" id="dialog">
             <thead class="thead-dark">
                 <tr>
@@ -79,3 +72,4 @@
 <script src="//code.jquery.com/jquery-1.12.4.js"></script>
 <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="/js/updatePet.js"></script>
+<script src="/js/deletePet.js"></script>
