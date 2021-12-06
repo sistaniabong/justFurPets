@@ -41,5 +41,3 @@ $( "#updatePet" ).click(function() {
   });
 $("#submitPet").click(updatePet);
 console.log("linked")
-
-                

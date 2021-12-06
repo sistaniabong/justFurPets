@@ -10,5 +10,8 @@ router.use('/pet', petRoutes);
 router.use('/petOwner', petOwnerRoute);
 router.use('/users', userRoutes);
 router.use('/activity', petActivityRoutes);
+router.use('/scheduledActivity', petActivityRoutes);
+
+
 
 module.exports = router;
