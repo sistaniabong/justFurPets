@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> --}}
-    
+
     <link rel="stylesheet" href="/css/style.css">
     {{!-- files needed for date picker
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
@@ -28,19 +28,22 @@
 
 <body>
   {{!-- This is the taskbar --}}
-  {{#if logged_in}} 
+  
    <header id = "toolbar">
         <img src="https://cdn.onlinewebfonts.com/svg/img_74462.png">
         <h1>JustFurPets</h1>
         <nav>
           <ul id = "toolbarOpts">
+            {{#if logged_in}}
             <li><a href="/api/pet">View All Pets</a></li>
             <li><a href="/create">Add a Pet</a></li>
             <li id="logout"><a href="">Log Out</a></li>
+            {{/if}}
           </ul>
         </nav>
     </header>
-  {{/if}}
+
+
   
   {{!-- <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
