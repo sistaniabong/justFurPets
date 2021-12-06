@@ -1,0 +1,81 @@
+
+<div class="container allpets">
+  <div class="row">
+    <div class="col-12">
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Species</th>
+                    <th scope="col">Owner</th>
+                    <th scope="col">Boarded</th>
+                    <th scope="col">Check-in Date</th>
+                    <th scope="col">Check-out Date</th>
+                    <th scope="col">Stay Duration</th>
+                    <th scope="col">Kennel Size</th>
+                    <th scope="col">Modify</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop over each pet object in the pets array -->
+                <tr class="table-light">
+                <th scope="row">{{pet.id}}</th>
+                <td>{{pet.pet_name}}</td>
+                <td>{{pet.pet_type}}</td>
+                <td>{{pet.pet_species}}</td>
+                <td>{{pet.petOwner.owner_name}}</td>
+                <td>{{pet.boarded}}</td>
+                <td>{{pet.check_in_date}}</td>
+                <td>{{pet.check_out_date}}</td>
+                <td>{{pet.stay_duration}} Days</td>
+                <td>{{pet.kennel_size}}</td>
+                <td>
+                    <button id="updatePet">Update</button>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-hover modal" id="dialog">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Species</th>
+                    <th scope="col">Owner</th>
+                    <th scope="col">Boarded</th>
+                    <th scope="col">Check-in Date</th>
+                    <th scope="col">Check-out Date</th>
+                    <th scope="col">Stay Duration</th>
+                    <th scope="col">Kennel Size</th>
+                    <th scope="col">Modify</th>
+                </tr>
+            </thead>
+                <tbody>
+                <!-- Loop over each pet object in the pets array -->
+                <tr class="table-light">
+                <th scope="row"><input size="3" id="id" type="text" readonly value={{pet.id}}></th>
+                <td><input size="10" id="name" type="text" value={{pet.pet_name}}></td>
+                <td><input size="10" id="type" type="text" value={{pet.pet_type}}></td>
+                <td><input size="10" id="species" type="text" value={{pet.pet_species}}></td>
+                <td><input size="10" id="ownerName" type="text" value={{pet.petOwner.owner_name}}></td>
+                <td><input size="3" id="boarded" type="text" value={{pet.boarded}}></td>
+                <td><input size="10" id="checkInDate" type="text" value={{pet.check_in_date}}></td>
+                <td><input size="10" id="checkOutDate" type="text" value={{pet.check_out_date}}></td>
+                <td><input size="3" id="duration" type="text" value={{pet.stay_duration}}></td>
+                <td><input size="3" id="kennelSize" type="text" value={{pet.kennel_size}}></td>
+                <td>
+                    <button id="submitPet">Submit</button>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+  </div>
+</div>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="/js/updatePet.js"></script>
