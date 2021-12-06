@@ -25,16 +25,15 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-//Reach...................................
-// router.post('/', async (req, res) => {
-//     // create a new pet owner
-//     try {
-//       const newPetOwnerData = await PetOwner.create(req.body);
-//       res.status(200).json(newPetOwnerData);
-//     } catch (err) {
-//       res.status(400).json(err);
-//     }
-//   });
+router.post('/', async (req, res) => {
+    // create a new pet owner
+    try {
+      const newPetOwnerData = await PetOwner.create(req.body);
+      res.status(200).json(newPetOwnerData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
 //Reach.............................................
 // router.put('/:id', async (req, res) => {
