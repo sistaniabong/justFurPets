@@ -1,7 +1,8 @@
 <div class="container allpets">
+    {{!-- droodown filter for pet type --}}
     <div class="dropdown">
         <button class="btn btn-info dropdown-toggle" id="viewpetBtn" type="button" id="dropdownMenuButton"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Pet Type
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -15,7 +16,7 @@
     <div class="row">
         <div class="col-12">
             <table class="table table-hover">
-                <thead class="thead-dark">
+                <thead class="table-dark">
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Name</th>
@@ -23,7 +24,7 @@
                         <th scope="col">Owner Name</th>
                         <th scope="col">Check-in Date</th>
                         <th scope="col">Check-out Date</th>
-                        <th scope="col">Actions</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>

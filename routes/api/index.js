@@ -9,5 +9,8 @@ const userRoutes = require('./userRoutes');
 router.use('/pet', petRoutes);
 router.use('/petOwner', petOwnerRoute);
 router.use('/users', userRoutes);
+router.use('/scheduledActivity', petActivityRoutes);
+
+
 
 module.exports = router;
