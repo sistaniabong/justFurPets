@@ -1,19 +1,55 @@
 
 <div id="createPage">
-    <p id="title">Create a new pet</p>
+    <p id="title">Createpet</p>
+
     <div id='inputs'>
         <div class="input-group mb-3">
             <div class="input-group mb-3 ">
-            <div class="input-group-prepend ">
-                <label class="input-group-text customprepend" for="inputGroupSelect01">Pet Owner</label>
-            </div>
-            <select class="custom-select customprepend petOwnerField" id="inputGroupSelect01">
-                <option selected>Choose...</option>
-                {{#each petOwners as |petOwner|}}
-                <option value="{{petOwner.id}}">{{petOwner.owner_name}}</option>
-                {{/each}}
-                <option value="petowner" id='createNewOwnerModal'>Create a new owner</option>
-            </select>
+                <div class="input-group-prepend ">
+                    <label class="input-group-text customprepend" for="inputGroupSelect01">Pet Owner</label>
+                </div>
+                <select class="custom-select customprepend petOwnerField" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    {{#each petOwners as |petOwner|}}
+                    <option value="{{petOwner.id}}">{{petOwner.owner_name}}</option>
+                    {{/each}}
+                </select>
+                <button type="button" class="btn btn-primary" id="createPetOwnerBtn" data-bs-toggle="modal" data-bs-target="#createPetOwnerModal">
+                    Create a new owner
+                </button>
+                    <!-- Modal -->
+                <div class="modal fade" id="createPetOwnerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="createPetOwnerModalLabel">Create New Pet Owner</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form new-petowner-form">
+                            <div class="form-group">
+                                <label for="ownerName">Owner Name</label>
+                                <input type="ownerName" class="form-control" id="ownerNameInput" placeholder="Enter Full Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="ownerPhoneNumber">Phone Number</label>
+                                <input type="ownerPhoneNumber" class="form-control" id="ownerPhoneNumberInput" aria-describedby="Help" placeholder="1234567890">
+                                <small id="Help" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
+
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="submitPetOwnerBtn">Submit</button>
+                        </form>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="createPetOwnerCloseBtn" data-bs-dismiss="modal">Close</button>
+                        {{!-- <button type="button" class="btn btn-primary">Save changes</button> --}}
+                    </div>
+                    </div>
+                </div>
+                </div>
+
         </div>
             <div class="input-group-prepend customprepend">
                 <span class="input-group-text customprepend" id="inputGroup-sizing-default">Pet's Name:</span>
@@ -86,4 +122,7 @@
     </div>
     <button type="button" class="btn btn-dark createPetSubmit">Submit</button>
 </div>
+
+
+
 <script src="./js/createPetPageScript.js"></script>
