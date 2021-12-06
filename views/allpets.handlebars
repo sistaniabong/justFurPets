@@ -1,3 +1,15 @@
+{{#unless logged_in}}
+<header id = "toolbar">
+    <img src="https://cdn.onlinewebfonts.com/svg/img_74462.png">
+    <h1>JustFurPets</h1>
+    <nav>          
+        <ul id = "toolbarOpts">
+        <li><a href="/">Home Page</a></li>
+        </ul>
+    </nav>
+</header>
+{{/unless}}
+
 <div class="container allpets">
     {{!-- droodown filter for pet type --}}
     <div class="dropdown">
@@ -45,7 +57,7 @@
                     {{/each}}
                 </tbody>
             </table>
-            <a class="btn btn-primary btn-lg center" href="/" role="button">Home Page</a>
+            {{!-- <a class="btn btn-primary btn-lg center" href="/" role="button">Home Page</a> --}}
         </div>
     </div>
 </div>
