@@ -152,3 +152,22 @@ margin: 50px 300px 50px 300px;
     left: 40%;
     position: relative;
 }
+
+/* css for pet profile */
+#petProfile{
+    margin-left: 20px;
+}
+#pPheader{
+    margin:20px;
+}
+#petData{
+    display:flex;
+    
+}
+#right-Column{
+    margin-left: 50px;
+}
+
+#petProfile button{
+    background-color: #e48365;
+}
