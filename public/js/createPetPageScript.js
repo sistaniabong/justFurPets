@@ -1,4 +1,7 @@
 const createPetSubmitButton = document.querySelector('.createPetSubmit');
+const createNewOwnerForm = document.querySelector('.new-petowner-form');
+
+const createNewOwnerButton = document.querySelector('#submitPetOwnerBtn');
 const newPetOwnerId = document.querySelector('.petOwnerField');
 const newPetName = document.querySelector('.petNameField');
 const newPetType = document.querySelector('.petTypeField');
@@ -50,6 +53,47 @@ const postPet = async (newPet) => {
     body: JSON.stringify(newPet),
   })
   if (response.ok) {
+<<<<<<< HEAD
     document.location.replace('/activity');
   }
 }
+=======
+    //redirect to the create pet activity page after new pet submission
+    document.location.replace('/createActivity');
+  }
+}
+
+
+const createNewOwnerHandler = async (event) => {
+  event.preventDefault();
+  // TODO: Add a comment describing the functionality of these expressions
+  const name = document.querySelector('#ownerNameInput').value.trim();
+  const phone_number = document.querySelector('#ownerPhoneNumberInput').value.trim();
+
+  try{
+    if (name && phone_number) {
+      console.log("creating pet owner")
+      const response = await fetch('/api/petOwner', {
+        method: 'POST',
+        body: JSON.stringify({ owner_name:name, phone_number:phone_number }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+      console.log(response)
+
+      if (response.ok) {
+        document.location.replace('/create');
+      } else {
+        alert('Failed to create pet owner');
+      }
+    }
+  }catch (err){
+    console.log(err)
+  }
+};
+
+
+
+
+createNewOwnerForm.addEventListener('submit',createNewOwnerHandler)
+
+>>>>>>> 1f1d0df3e8485fb7da2c5e1d7e4655bb9b74ae23

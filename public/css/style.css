@@ -49,7 +49,7 @@ body {
     text-decoration: none;
 }
 
-#petsBtn:hover, #loginBtn:hover{
+#petsBtn:hover, #loginBtn:hover {
     background-color: #6fc4c7 !important;
     box-shadow: 1px 1px 15px 1px rgb(97, 97, 97);
 }
@@ -71,7 +71,8 @@ body {
 } 
 
 #toolbar h1{
-    margin:10px 0px 0px 0px;
+    margin:20px 0px 0px 0px;
+    font-size: 40px;
 }
 
 #toolbarOpts{
@@ -135,6 +136,23 @@ margin: 50px 300px 50px 300px;
     font-size: 20px;
 }
 
+.createPetSubmit{
+    background-color: #e48365;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #e48365;
+}
+
+/* Create Pet Owner */
+#createPetOwnerBtn, #submitPetOwnerBtn{
+    background-color: #e48365;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #e48365;
+}
+
+
+
 /* css styles for view all pets page */
 .allpets {
     margin-top:30px;
@@ -147,8 +165,59 @@ margin: 50px 300px 50px 300px;
     border-color: #e48365;
 }
 
+.largerButtonPetType{
+    font-size: 20px;
+    background-color: #e48365;
+}
+
+.dropdown-menu{
+    font-size: 15px;
+}
+
 
 .center{
     left: 40%;
     position: relative;
+}
+
+/* css for pet profile */
+#petProfile{
+    margin-left: 20px;
+    font-size: 25px;
+}
+#pPheader{
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+#petData{
+    display:flex;
+    
+}
+#right-Column{
+    margin-left: 50px;
+}
+
+#petProfile button{
+    background-color: #e48365;
+}
+
+#petProfile h3{
+    font-size: 35px;
+    text-decoration: underline;
+}
+
+#updatePet:hover, #deletePet:hover, #submitPet:hover{
+    background-color: #e06a45;
+    box-shadow: 1px 1px 15px 1px rgb(97, 97, 97);
+}
+
+#submitPet{
+    background-color: #e48365;
+}
+#dialog{
+    background-image:url('https://st3.depositphotos.com/3058647/14243/v/450/depositphotos_142432659-stock-illustration-animal-paw-seamless-gray-pattern.jpg'); 
+}
+.myTitleClass .ui-dialog-titlebar {
+    background:#e48365;
 }
