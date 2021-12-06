@@ -49,7 +49,7 @@ body {
     text-decoration: none;
 }
 
-#petsBtn:hover, #loginBtn:hover{
+#petsBtn:hover, #loginBtn:hover {
     background-color: #6fc4c7 !important;
     box-shadow: 1px 1px 15px 1px rgb(97, 97, 97);
 }
@@ -148,6 +148,15 @@ margin: 50px 300px 50px 300px;
     border-color: #e48365;
 }
 
+.largerButtonPetType{
+    font-size: 20px;
+    background-color: #e48365;
+}
+
+.dropdown-menu{
+    font-size: 15px;
+}
+
 
 .center{
     left: 40%;
@@ -179,4 +188,9 @@ margin: 50px 300px 50px 300px;
 #petProfile h3{
     font-size: 35px;
     text-decoration: underline;
+}
+
+#updatePet:hover, #deletePet:hover{
+    background-color: #e06a45;
+    box-shadow: 1px 1px 15px 1px rgb(97, 97, 97);
 }
