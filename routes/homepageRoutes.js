@@ -50,4 +50,12 @@ router.get('api/pet', async(req,res) => {
     }
 });
 
+router.get('/createActivity', async(req,res) => {
+  try {
+      res.render('createScheduledEventPage')
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
 module.exports = router;
