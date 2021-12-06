@@ -207,7 +207,17 @@ margin: 50px 300px 50px 300px;
     text-decoration: underline;
 }
 
-#updatePet:hover, #deletePet:hover{
+#updatePet:hover, #deletePet:hover, #submitPet:hover{
     background-color: #e06a45;
     box-shadow: 1px 1px 15px 1px rgb(97, 97, 97);
+}
+
+#submitPet{
+    background-color: #e48365;
+}
+#dialog{
+    background-image:url('https://st3.depositphotos.com/3058647/14243/v/450/depositphotos_142432659-stock-illustration-animal-paw-seamless-gray-pattern.jpg'); 
+}
+.myTitleClass .ui-dialog-titlebar {
+    background:#e48365;
 }

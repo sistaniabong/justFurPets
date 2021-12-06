@@ -35,7 +35,7 @@ const updatePet = async (event) => {
     document.location.replace(`/api/pet/${petId}`);
 }
 const modal = document.getElementById("#modal");
-$( "#dialog" ).dialog({ autoOpen: false, minWidth: 1300 });
+$( "#dialog" ).dialog({ autoOpen: false, minWidth: 400, title: "Edit Pet", dialogClass: "myTitleClass" });
 $( "#updatePet" ).click(function() {
     $( "#dialog" ).dialog( "open" );
   });
