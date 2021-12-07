@@ -45,10 +45,11 @@ router.get('/signuppage', async (req, res) => {
 // html route to create activity page
 router.get('/createActivity', async(req,res) => {
   try {
-      res.render('createScheduledEventPage')
+      res.render('createScheduledEventPage', {logged_in: req.session.logged_in})
   } catch (err) {
       res.status(500).json(err);
   }
 });
+
 
 module.exports = router;
