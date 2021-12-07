@@ -1,34 +1,36 @@
 {{#unless logged_in}}
-<header id = "toolbar">
-    <img src="https://cdn.onlinewebfonts.com/svg/img_74462.png">
-    <h1>JustFurPets</h1>
-    <nav>          
-        <ul id = "toolbarOpts">
-        <li><a href="/">Home Page</a></li>
-        </ul>
-    </nav>
+<header id="toolbar">
+  <img src="https://cdn.onlinewebfonts.com/svg/img_74462.png">
+  <h1>JustFurPets</h1>
+  <nav>
+    <ul id="toolbarOpts">
+      <li><a href="/">Home Page</a></li>
+    </ul>
+  </nav>
 </header>
 {{/unless}}
 
 
-<div class="h-100 row align-items-center vertical-center-row d-flex justify-content-lg-center">
+<div class="h-100 row d-flex">
   <div class="col-md-12">
     <div class="center col-md-3 text-dark">
-      <h2 class="fs-3 btnColor text-dark">Login</h2>
-      <form class="form login-form">
-        <div class="form-group">
-          <label for="email-login" class="fs-4 btnColor text-dark">User Name:</label>
-          <input class="form-input fs-4 text-dark" type="text" id="email-login" />
-        </div>
-        <div class="form-group">
-          <label for="password-login" class="fs-4 btnColor text-dark">Password : </label>
-          <input class="form-input fs-4 text-dark" type="password" id="password-login" />
-        </div>
-        <div class="form-group">
-          <button class="btn btn-primary fs-4 btnColor text-dark m-0" type="submit">login</button>
-          <button id="signUp" class="btn btn-primary fs-4 btnColor text-dark m-0" type="button">signup</button>
-        </div>
-      </form>
+      <div id="loginGroup">
+        <h2 id="loginTitle" class="fs-3 btnColor loginNoBtn text-dark">Login</h2>
+        <form class="form login-form">
+          <div class="form-group">
+            <label for="email-login" class=" login-headers fs-4 btnColor loginNoBtn text-dark">User Name:</label>
+            <input class="form-input fs-4 text-dark" type="text" id="email-login" />
+          </div>
+          <div class="form-group">
+            <label  for="password-login" class="login-headers fs-4 btnColor loginNoBtn text-dark">Password:</label>
+            <input class="form-input fs-4 text-dark" type="password" id="password-login" />
+          </div>
+          <div class="form-group">
+            <button class="login-headers btn btn-primary fs-4 btnColor text-dark m-0" type="submit">login</button>
+            <button id="signUp" class=" login-headers btn btn-primary fs-4 btnColor text-dark m-0" type="button">signup</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
