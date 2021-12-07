@@ -234,3 +234,20 @@ max-width: 70%;
 .myTitleClass .ui-dialog-titlebar {
     background:#e48365;
 }
+
+.fs-1{
+    font-size: 50px;
+}
+
+.fs-2{
+    font-size: 15px;
+}
+
+.btnColor{
+    text-align: center;
+    background-color: #e48365;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #e48365;
+    color: white;
+}
