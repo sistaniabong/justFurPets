@@ -1,88 +1,27 @@
 <div id="createPage">
-    <p id="title">Create a new pet</p>
+    <p id="title">Create a New Schedule Activity!</p>
     <div id='inputs'>
         <div class="input-group mb-3">
-            <div class="input-group mb-3 ">
             <div class="input-group-prepend ">
-                <label class="input-group-text customprepend" for="inputGroupSelect01">Pet Owner</label>
+                <span class="input-group-text customprepend" id="inputGroup-sizing-default">Type (walk, meal, medicine, playtime, etc):</span>
             </div>
-            <select class="custom-select customprepend petOwnerField" id="inputGroupSelect01">
-                <option selected>Choose...</option>
-                {{#each petOwners as |petOwner|}}
-                <option value="{{petOwner.id}}">{{petOwner.owner_name}}</option>
-                {{/each}}
-                <option value="petowner" id='createNewOwnerModal'>Create a new owner</option>
-            </select>
-        </div>
-            <div class="input-group-prepend customprepend">
-                <span class="input-group-text customprepend" id="inputGroup-sizing-default">Pet's Name:</span>
-            </div>
-            <input type="text" class="form-control customprepend petNameField" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default">
-        </div>
-         <div class="input-group mb-3">
-            <div class="input-group-prepend ">
-                <label class="input-group-text customprepend" for="inputGroupSelect01" >Pet Type</label>
-            </div>
-            <select class="custom-select customprepend petTypeField" id="inputGroupSelect01">
-                <option selected>Choose...</option>
-                <option value="cat">Cat</option>
-                <option value="dog">Dog</option>
-                <option value="bird">Bird</option>
-                <option value="others">Others</option>
-
-            </select>
-        </div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend ">
-                <span class="input-group-text customprepend" id="inputGroup-sizing-default">Pet's Species:</span>
-            </div>
-            <input type="text" class="form-control customprepend petSpeciesField" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default">
-        </div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend ">
-                <label class="input-group-text customprepend" for="inputGroupSelect01">Overnight Stay?</label>
-            </div>
-            <select class="custom-select customprepend petOvernightField" id="inputGroupSelect01">
-                <option selected>Choose...</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-            </select>
-        </div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend customprepend">
-                <span class="input-group-text customprepend" id="inputGroup-sizing-default">Check-In Date</span>
-            </div>
-            <input type="text" class="form-control customprepend petCheckInField" aria-label="Sizing example input"
+            <input type="text" class="form-control customprepend activityTypeField" aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-default">
         </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend customprepend">
-                <span class="input-group-text customprepend" id="inputGroup-sizing-default">Check-Out Date</span>
+                <span class="input-group-text customprepend" id="inputGroup-sizing-default">Description</span>
             </div>
-            <input type="text" class="form-control customprepend petCheckOutField" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default">
-        </div>
-         <div class="input-group mb-3">
-            <div class="input-group-prepend customprepend">
-                <span class="input-group-text customprepend" id="inputGroup-sizing-default">Stay Duration in Days</span>
-            </div>
-            <input type="text" class="form-control customprepend petDurationField" aria-label="Sizing example input"
+            <input type="text" class="form-control customprepend activityDescriptionField" aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-default">
         </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend customprepend">
-                <label class="input-group-text customprepend" for="inputGroupSelect01">Choose a Kennel Size</label>
+                <span class="input-group-text customprepend" id="inputGroup-sizing-default">Time</span>
             </div>
-            <select class="custom-select customprepend petKennelSizeField" id="inputGroupSelect01">
-                <option selected>Choose...</option>
-                <option value="s">Small</option>
-                <option value="m">Medium</option>
-                <option value="l">Large</option>
-            </select>
+            <input type="text" class="form-control customprepend activityTimeField" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default">
         </div>
-    </div>
-    <button type="button" class="btn btn-dark createPetSubmit">Submit</button>
+    <button type="button" class="btn btn-dark createActivitySubmit">Submit</button>
 </div>
-<script src="./js/createPetPageScript.js"></script>
+<script src="./js/createScheduledActivityScript.js"></script>
