@@ -53,11 +53,6 @@ const postPet = async (newPet) => {
     body: JSON.stringify(newPet),
   })
   if (response.ok) {
-<<<<<<< HEAD
-    document.location.replace('/activity');
-  }
-}
-=======
     //redirect to the create pet activity page after new pet submission
     document.location.replace('/createActivity');
   }
@@ -96,4 +91,3 @@ const createNewOwnerHandler = async (event) => {
 
 createNewOwnerForm.addEventListener('submit',createNewOwnerHandler)
 
->>>>>>> 1f1d0df3e8485fb7da2c5e1d7e4655bb9b74ae23
