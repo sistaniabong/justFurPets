@@ -1,7 +1,8 @@
+console.log(document.getElementById('id').textContent)
 const updatePet = async (event) => {
     // TODO: Add a comment describing the functionality of this statement
     console.log("button submitted")
-    const petId = document.querySelector("#id").value.trim();
+    const petId = document.getElementById('id').textContentgit pull
     const petName = document.querySelector("#name").value.trim();
     const type = document.querySelector("#type").value.trim();
     const species = document.querySelector("#species").value.trim();
@@ -9,11 +10,10 @@ const updatePet = async (event) => {
     const boarded = document.querySelector("#boarded").value.trim();
     const checkInDate = document.querySelector("#checkInDate") .value.trim();
     const checkOutDate = document.querySelector("#checkOutDate").value.trim();
-    const duration = document.querySelector("#duration").value.trim();
     const kennelSize = document.querySelector("#kennelSize").value.trim();
 
 
-    if (petName || type || species || ownerName || boarded || checkInDate || checkOutDate || duration || kennelSize) 
+    if (petName || type || species || ownerName || boarded || checkInDate || checkOutDate || kennelSize) 
     {
         const response = await fetch(`/api/pet/${petId}`, {
           method: 'PUT',
@@ -26,7 +26,6 @@ const updatePet = async (event) => {
                 boarded: boarded,
                 check_in_date: checkInDate,
                 check_out_date: checkOutDate,
-                stay_duration: duration,
                 kennel_size: kennelSize
             }),
           headers: { 'Content-Type': 'application/json' },
