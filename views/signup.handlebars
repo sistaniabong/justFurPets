@@ -1,39 +1,38 @@
-
 {{#unless logged_in}}
-<header id = "toolbar">
-    <img src="https://cdn.onlinewebfonts.com/svg/img_74462.png">
-    <h1>JustFurPets</h1>
-    <nav>          
-        <ul id = "toolbarOpts">
-        <li><a href="/">Home Page</a></li>
-        </ul>
-    </nav>
+<header id="toolbar">
+  <img src="https://cdn.onlinewebfonts.com/svg/img_74462.png">
+  <h1>JustFurPets</h1>
+  <nav>
+    <ul id="toolbarOpts">
+      <li><a href="/">Home Page</a></li>
+    </ul>
+  </nav>
 </header>
 {{/unless}}
 
-<div class="h-100 row align-items-center vertical-center-row d-flex justify-content-lg-center">
+<div class="h-100">
   <div class="col-md-12">
-    <div class="center col-md-12">
-      <h2>Sign Up</h2>
+    <div id="loginGroup2" class="center col-md-12">
+      <h2 id="loginTitle2" class="btnColor loginNoBtn">Sign Up</h2>
       <form class="form login-form">
         <div class="form-group">
+          <label for="email-login"class="signUpWidth"> email</label>
           <input class="form-input" type="text" id="email-login" />
-          <label for="email-login">:email</label>
         </div>
         <div class="form-group">
+          <label for="password-login"class="signUpWidth"> password</label>
           <input class="form-input" type="password" id="password-login" />
-          <label for="password-login">:password</label>
         </div>
         <div class="form-group">
+          <label for="password-login"class="signUpWidth"> verify password</label>
           <input class="form-input" type="password" id="password-verify" />
-          <label for="password-login">:verify password</label>
         </div>
         <div class="form-group">
-          <button class="btn btn-primary" type="submit">create</button>
+          <button id="moreSpacebtn" class="btn btn-primary btnColor" type="submit">create</button>
         </div>
       </form>
-    </div>
   </div>
+</div>
 </div>
 
 <script src="./js/signup.js"></script>
