@@ -326,3 +326,11 @@ max-width: 70%;
     color: white;
 
 }
+
+#activityHeader{
+    display: flex;
+}
+
+#addActivity{
+    margin-left: 30px;
+}

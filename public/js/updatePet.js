@@ -40,3 +40,10 @@ $( "#updatePet" ).click(function() {
   });
 $("#submitPet").click(updatePet);
 console.log("linked")
+
+const addActivity = () => 
+{
+  const petId = document.getElementById('id').textContent;
+  document.location.replace(`/createActivity?pet_id=${petId}`);
+}
+$("#addActivity").click(addActivity);

@@ -17,12 +17,13 @@
                 <p><b>Kennel Size:</b> {{pet.kennel_size}}</p>
             </div>
             <div id="right-Column">
-                <h3>Activities:</h3>
+                <div id="activityHeader"><h3>Activities:</h3><button id="addActivity">Add Activity</button></div>
                 {{#each activitys as |activity|}}
                 <div class="card">
                     <div class="card-body" style="background-color: #e48365;">
                         <h5 class="card-title" style="background-color: #7dc5d1;">{{activity.activity_type}}</h5>
-                        <p>{{activity.activity_description}}</p>
+                        <p class="d-flex">{{activity.activity_description}}</p>
+                        <p class="d-flex"><b>Time :</b>{{activity.time}}</p>
                     </div>
                 </div>
                 {{/each}}
