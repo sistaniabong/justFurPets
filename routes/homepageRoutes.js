@@ -43,7 +43,7 @@ router.get('/signuppage', async (req, res) => {
 });
 
 // html route to create activity page
-router.get('/createActivity', async(req,res) => {
+router.get('/createActivity', withAuth, async(req,res) => {
   try {
       res.render('createScheduledEventPage', {logged_in: req.session.logged_in})
   } catch (err) {
