@@ -18,9 +18,10 @@
             </div>
             <div id="right-Column">
                 <h3>Activities:</h3>
-                {{!-- {{#each pet.scheduledActivity}} --}}
-                <p>{{pet.scheduledActivity.activityDescription}}</p>
-                {{!-- {{/each}} --}}
+                {{#each activitys as |activity|}}
+                <p style="text-decoration: underline;">{{activity.activity_type}}</p>
+                <p>{{activity.activity_description}}</p>
+                {{/each}}
             </div>
 
         </div>
