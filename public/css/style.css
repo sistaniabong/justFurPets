@@ -54,6 +54,58 @@ body {
     box-shadow: 1px 1px 15px 1px rgb(97, 97, 97);
 }
 
+#loginGroup{
+    margin-top: 100px;
+    background-color: #a4cdd4 !important;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 50px 30px;
+    max-width: 390px;
+    display: flex;
+    justify-content: end;
+}
+
+#loginGroup2{
+    margin-top: 100px;
+    background-color: #a4cdd4 !important;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 10px 10px;
+    max-width: 390px;
+    display: flex;
+    justify-content: end;
+}
+
+#loginTitle{
+    border:2px solid black;
+    padding:5px 0px;
+    text-decoration: underline;
+    font-size: 40px !important;
+    color:black;
+}
+
+#loginTitle2{
+    border:2px solid black;
+    padding:5px 0px;
+    text-decoration: underline;
+    font-size: 40px !important;
+    color:black;
+    width: 250px;
+    margin-right: 10px;
+    max-height: 70px;
+    margin-top: 20px;
+}
+
+#moreSpacebtn{
+    margin-top: 5px !important;
+}
+
+.login-headers{
+    margin: 5px 0px !important;
+    padding:0px 3px;
+    border:2px solid black !important;
+}
+
 
 #homepage #loginBtn{
     font-size: 20px;
@@ -63,6 +115,14 @@ body {
     background-color: #a4cdd4;
 }
 
+.loginNoBtn{
+    background-color: #60bfcf !important;
+}
+
+.signUpWidth{
+    width:120px;
+    margin: 5px 0px;
+}
 
 #toolbar {
     display: flex;
@@ -115,6 +175,12 @@ body {
     background-color: #60bfcf;
     border: 2px solid black;
     border-radius: 10px;    
+}
+#pPheaderUpdate{
+    background-color: #60bfcf;
+    border: 2px solid black;
+    border-radius: 10px;  
+    padding: 10px 0px 10px 10px;
 }
 
 #createPage .customprepend{
@@ -226,10 +292,18 @@ max-width: 70%;
 }
 
 #submitPet{
+    margin-top: 5px;
     background-color: #e48365;
 }
 #dialog{
     background-image:url('https://st3.depositphotos.com/3058647/14243/v/450/depositphotos_142432659-stock-illustration-animal-paw-seamless-gray-pattern.jpg'); 
+}
+
+#left-column-update{
+    background-color: #b9d5da;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 8px  22px;
 }
 .myTitleClass .ui-dialog-titlebar {
     background:#e48365;
@@ -250,4 +324,5 @@ max-width: 70%;
     border-style: solid;
     border-color: #e48365;
     color: white;
+
 }

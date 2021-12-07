@@ -2,7 +2,7 @@ console.log(document.getElementById('id').textContent)
 const updatePet = async (event) => {
     // TODO: Add a comment describing the functionality of this statement
     console.log("button submitted")
-    const petId = document.getElementById('id').textContentgit pull
+    const petId = document.getElementById('id').textContent;
     const petName = document.querySelector("#name").value.trim();
     const type = document.querySelector("#type").value.trim();
     const species = document.querySelector("#species").value.trim();
