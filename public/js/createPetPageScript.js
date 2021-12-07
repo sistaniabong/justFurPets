@@ -52,12 +52,21 @@ const postPet = async (newPet) => {
     },
     body: JSON.stringify(newPet),
   })
+<<<<<<< Updated upstream
   console.log(response);
   console.log(response.Result)
+=======
+  const data = await response.json();
+>>>>>>> Stashed changes
   if (response.ok) {
     
     //redirect to the create pet activity page after new pet submission
+<<<<<<< Updated upstream
     //document.location.replace(`/createActivity`);
+=======
+
+    document.location.replace(`/createActivity?pet_id=${data.id}`);
+>>>>>>> Stashed changes
   }
 }
 

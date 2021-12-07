@@ -9,12 +9,14 @@ createActivitySubmitButton.addEventListener('click', (event) => {
   // console.log(newActivityType.value)
   // console.log(newActivityDescription.value)
   // console.log(newActivityTime.value)
+  const urlSearchParams = window.location.search;
+  const pet_id = urlSearchParams.split('=')[1]
+  
 
   const activityData = {
     activity_type: newActivityType.value.trim(),
     activity_description: newActivityDescription.value.trim(),
-    //How do I assign this to the pet were adding?
-    pet_id: 2,
+    pet_id: pet_id,
     time: newActivityTime.value.trim()
   }
   console.log(activityData);
