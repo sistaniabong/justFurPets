@@ -4,7 +4,7 @@
     <div class="col-12">
         <div id="petProfile">
         <h1 id="pPheader">{{pet.pet_name}}'s Profile</h1>
-        <div id=petData>
+        <div id="petData">
             <div id="left-column">
                 <h3>Info:</h3>
                 <p><b>Owner's name:</b> {{pet.petOwner.owner_name}}</p>
@@ -32,9 +32,8 @@
     </div>
     <div id="dialog">
         <h1 id="pPheaderUpdate" size="10" id="name" type="text">{{pet.pet_name}}'s Profile</h1>
-        <div id=petData>
-            <div id="left-column">
-                <h3>Info:</h3>
+        <div id="petData">
+            <div id="left-column-update">
                 <p><b size="3" id="id" type="text" >Pet Number: </b>{{pet.id}}</p>
                 <p><b>Owner's name:</b> <input size="10" id="ownerName" type="text" value={{pet.petOwner.owner_name}}></p>
                 <p><b>Owner's phone:</b> {{pet.petOwner.phone_number.[0]}}{{pet.petOwner.phone_number.[1]}}{{pet.petOwner.phone_number.[2]}}-{{pet.petOwner.phone_number.[3]}}{{pet.petOwner.phone_number.[4]}}{{pet.petOwner.phone_number.[5]}}-{{pet.petOwner.phone_number.[6]}}{{pet.petOwner.phone_number.[7]}}{{pet.petOwner.phone_number.[8]}}{{pet.petOwner.phone_number.[9]}}</p>
