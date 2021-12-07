@@ -52,9 +52,11 @@ const postPet = async (newPet) => {
     },
     body: JSON.stringify(newPet),
   })
+  const data = await response.json();
   if (response.ok) {
     //redirect to the create pet activity page after new pet submission
-    document.location.replace('/createActivity');
+
+    document.location.replace(`/createActivity?pet_id=${data.id}`);
   }
 }
 
