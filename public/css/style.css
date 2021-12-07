@@ -116,6 +116,12 @@ body {
     border: 2px solid black;
     border-radius: 10px;    
 }
+#pPheaderUpdate{
+    background-color: #60bfcf;
+    border: 2px solid black;
+    border-radius: 10px;  
+    padding: 10px 0px 10px 10px;
+}
 
 #createPage .customprepend{
     font-size: 20px;
@@ -226,10 +232,18 @@ max-width: 70%;
 }
 
 #submitPet{
+    margin-top: 5px;
     background-color: #e48365;
 }
 #dialog{
     background-image:url('https://st3.depositphotos.com/3058647/14243/v/450/depositphotos_142432659-stock-illustration-animal-paw-seamless-gray-pattern.jpg'); 
+}
+
+#left-column-update{
+    background-color: #b9d5da;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 8px  22px;
 }
 .myTitleClass .ui-dialog-titlebar {
     background:#e48365;
