@@ -30,11 +30,11 @@
 
     </div>
     <div id="dialog">
-        <h1 id="pPheaderUpdate"><input size="10" id="name" type="text" value={{pet.pet_name}}>'s Profile</h1>
+        <h1 id="pPheaderUpdate" size="10" id="name" type="text">{{pet.pet_name}}'s Profile</h1>
         <div id=petData>
             <div id="left-column">
                 <h3>Info:</h3>
-                <p><b>Pet ID:<input size="3" id="id" type="text" readonly value={{pet.id}}></b></p>
+                <p><b size="3" id="id" type="text" >Pet Number: </b>{{pet.id}}</p>
                 <p><b>Owner's name:</b> <input size="10" id="ownerName" type="text" value={{pet.petOwner.owner_name}}></p>
                 <p><b>Owner's phone:</b> {{pet.petOwner.phone_number.[0]}}{{pet.petOwner.phone_number.[1]}}{{pet.petOwner.phone_number.[2]}}-{{pet.petOwner.phone_number.[3]}}{{pet.petOwner.phone_number.[4]}}{{pet.petOwner.phone_number.[5]}}-{{pet.petOwner.phone_number.[6]}}{{pet.petOwner.phone_number.[7]}}{{pet.petOwner.phone_number.[8]}}{{pet.petOwner.phone_number.[9]}}</p>
                 <p><b>Pet Type:</b> <input size="10" id="type" type="text" value={{pet.pet_type}}></p>
@@ -43,7 +43,6 @@
                 <p><b>Check-out Date:</b> <input size="10" id="checkOutDate" type="text" value={{pet.check_out_date}}></p>
                 <p><b>Is Boarded:</b> <input size="3" id="boarded" type="text" value={{pet.boarded}}></p>
                 <p><b>Kennel Size:</b> <input size="3" id="kennelSize" type="text" value={{pet.kennel_size}}></p>
-                <p><b>Stay Duration:</b> <input size="3" id="duration" type="text" value={{pet.stay_duration}}></p>
             </div>
 
         </div>
