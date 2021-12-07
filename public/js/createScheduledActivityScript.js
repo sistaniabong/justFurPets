@@ -4,11 +4,11 @@ const newActivityTime = document.querySelector('.activityTimeField');
 const createActivitySubmitButton = document.querySelector('.createActivitySubmit');
 
 
-createActivitySubmitButton.addEventListener('click', () => {
+createActivitySubmitButton.addEventListener('click', (event) => {
   event.preventDefault;
-  console.log(newActivityType.value)
-  console.log(newActivityDescription.value)
-  console.log(newActivityTime.value)
+  // console.log(newActivityType.value)
+  // console.log(newActivityDescription.value)
+  // console.log(newActivityTime.value)
 
   const activityData = {
     activity_type: newActivityType.value.trim(),
@@ -17,13 +17,13 @@ createActivitySubmitButton.addEventListener('click', () => {
     pet_id: 2,
     time: newActivityTime.value.trim()
   }
-  console.log(activityData)
-  postActivity(activityData)
+  console.log(activityData);
+  postActivity(activityData);
 })
 
 
 const postActivity = async (newActivity) => {
-  const response = await fetch('/api/activity/', {
+  const response = await fetch('/api/scheduledActivity/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -31,6 +31,7 @@ const postActivity = async (newActivity) => {
     body: JSON.stringify(newActivity),
   })
   console.log(response)
+  console.log(response.Result)
   if (response.ok) {
     document.location.replace('/');
   }
