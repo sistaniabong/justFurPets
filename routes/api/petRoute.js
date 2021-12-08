@@ -81,7 +81,6 @@ router.post('/', async (req, res) => {
     // create a new pet
     try {
       const petData = await Pet.create(req.body);
-      console.log(petData)
       res.status(200).json(petData);
     } catch (err) {
       res.status(400).json(err);
