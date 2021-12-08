@@ -6,9 +6,6 @@ const createActivitySubmitButton = document.querySelector('.createActivitySubmit
 
 createActivitySubmitButton.addEventListener('click', (event) => {
   event.preventDefault;
-  // console.log(newActivityType.value)
-  // console.log(newActivityDescription.value)
-  // console.log(newActivityTime.value)
   const urlSearchParams = window.location.search;
   const pet_id = urlSearchParams.split('=')[1]
 

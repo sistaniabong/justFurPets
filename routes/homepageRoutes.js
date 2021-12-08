@@ -50,5 +50,12 @@ router.get('/createActivity', withAuth, async(req,res) => {
   }
 });
 
+router.get('/analytics', async (req, res) => {
+  try{
+    res.redirect('/api/analytics');
+  } catch(err){
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
