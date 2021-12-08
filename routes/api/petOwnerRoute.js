@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { PetOwner } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 
 router.get('/', async (req, res) => {
@@ -25,7 +26,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     // create a new pet owner
     try {
       const newPetOwnerData = await PetOwner.create(req.body);
