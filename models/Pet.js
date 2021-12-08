@@ -32,23 +32,12 @@ Pet.init(
         key: 'id',
       }
     },
-    boarded: {
-      type: DataTypes.BOOLEAN,
-      //Reach: Anyway we can have the business chose the defaule here based off their business?
-      defaultValue: true,
-      allowNull: false
-    },
     check_in_date: {
       type: DataTypes.STRING,
       allowNull: false
     },
     check_out_date: {
       type: DataTypes.STRING,
-      allowNull: false
-    },
-    //Who wants to figure out how to make this automatically calculate as a hook?
-    stay_duration: {
-      type: DataTypes.INTEGER,
       allowNull: false
     },
     kennel_size: {

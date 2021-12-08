@@ -97,7 +97,6 @@ router.put('/:id', async (req, res) => {
           pet_name: req.body.pet_name,
           pet_type: req.body.pet_type,
           pet_species: req.body.pet_species,
-          boarded: req.body.boarded,
           check_in_date: req.body.check_in_date,
           check_out_date: req.body.check_out_date,
           kennel_size: req.body.kennel_size

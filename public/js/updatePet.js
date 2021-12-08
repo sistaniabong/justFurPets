@@ -22,7 +22,6 @@ const updatePet = async (event) => {
                 pet_type: type,
                 pet_species: species,
                 pet_owner_id: ownerName,
-                boarded: boarded,
                 check_in_date: checkInDate,
                 check_out_date: checkOutDate,
                 kennel_size: kennelSize

@@ -7,7 +7,6 @@ router.post('/', withAuth, async (req, res) => {
         const activityData = await ScheduledActivity.create(req.body);
         console.log(activityData);
         console.log('working')
-        console.log(res)
         res.status(200).json(activityData);
         
     } catch (err) {

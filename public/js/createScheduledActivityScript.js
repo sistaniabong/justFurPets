@@ -11,11 +11,11 @@ createActivitySubmitButton.addEventListener('click', (event) => {
   // console.log(newActivityTime.value)
   const urlSearchParams = window.location.search;
   const pet_id = urlSearchParams.split('=')[1]
-  
 
   const activityData = {
     activity_type: newActivityType.value.trim(),
     activity_description: newActivityDescription.value.trim(),
+    //How do I assign this to the pet were adding?
     pet_id: pet_id,
     time: newActivityTime.value.trim()
   }
@@ -34,6 +34,7 @@ const postActivity = async (newActivity) => {
     },
     body: JSON.stringify(newActivity),
   })
+
   if (response.ok) {
     document.location.replace(`/api/pet/${pet_id}`);
   }
