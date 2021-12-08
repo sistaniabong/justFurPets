@@ -3,7 +3,6 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./routes');
-// import sequelize connection
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -23,7 +22,6 @@ const sess = {
   
 app.use(session(sess));
 
-// Inform Express.js which template engine we're using
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
@@ -33,12 +31,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-// test catch-all route to check if app is working
-app.get('*', (req, res) =>
-    res.json("Server Listening")
-);
-
-// sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
