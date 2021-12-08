@@ -47,7 +47,6 @@ const postPet = async (newPet) => {
 
 const createNewOwnerHandler = async (event) => {
   event.preventDefault();
-  // TODO: Add a comment describing the functionality of these expressions
   const name = document.querySelector('#ownerNameInput').value.trim();
   const phone_number = document.querySelector('#ownerPhoneNumberInput').value.trim();
 
