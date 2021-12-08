@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Pet, PetOwner } = require('../../models');
+const { Pet, PetOwner, ScheduledActivity } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
@@ -61,11 +61,14 @@ router.get('/:id', withAuth, async (req, res) => {
           model: PetOwner,
           attributes: ['owner_name','phone_number'],
         },
-      ],
+      ],     
     });
+    const activityData = await ScheduledActivity.findAll({ where: {pet_id:req.params.id}})
+    const activitys = activityData.map((activity) => activity.get({ plain: true }));
       const pet = petData.get({ plain: true });
       res.render('petDetails', { 
         pet,
+        activitys,
         logged_in: req.session.logged_in 
       });             
   } catch (err) {
