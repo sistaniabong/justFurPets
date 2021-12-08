@@ -12,7 +12,7 @@ const newPetCheckOut = document.querySelector('.petCheckOutField');
 const newPetDuration = document.querySelector('.petDurationField');
 const newPetKennelSize = document.querySelector('.petKennelSizeField');
 
-createPetSubmitButton.addEventListener('click', () => {
+createPetSubmitButton.addEventListener('click', (event) => {
   event.preventDefault;
   // console.log(newPetOwnerId.value)
   // console.log(newPetName.value)
@@ -52,16 +52,17 @@ const postPet = async (newPet) => {
     },
     body: JSON.stringify(newPet),
   })
+
+  const data = await response.json();
   if (response.ok) {
     //redirect to the create pet activity page after new pet submission
-    document.location.replace('/createActivity');
+    document.location.replace(`/createActivity?pet_id=${data.id}`);
   }
 }
 
 
 const createNewOwnerHandler = async (event) => {
   event.preventDefault();
-  // TODO: Add a comment describing the functionality of these expressions
   const name = document.querySelector('#ownerNameInput').value.trim();
   const phone_number = document.querySelector('#ownerPhoneNumberInput').value.trim();
 

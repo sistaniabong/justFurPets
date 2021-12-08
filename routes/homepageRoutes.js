@@ -29,7 +29,6 @@ router.get('/create',withAuth , async(req,res) => {
 });
 
 router.get('/login', (req, res) => {
-    // TODO: Add a comment describing the functionality of this if statement
     if (req.session.logged_in) {
       res.redirect('/api/pet');
       return;
@@ -43,7 +42,7 @@ router.get('/signuppage', async (req, res) => {
 });
 
 // html route to create activity page
-router.get('/createActivity', async(req,res) => {
+router.get('/createActivity', withAuth, async(req,res) => {
   try {
       res.render('createScheduledEventPage', {logged_in: req.session.logged_in})
   } catch (err) {
