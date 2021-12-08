@@ -1,6 +1,5 @@
 const deletePet = async (event) => {
-    const petId = document.querySelector("#id").value.trim();
-
+    const petId = document.getElementById('id').textContent;    console.log("Test1")
     const response = await fetch(`/api/pet/${petId}`, {
         method: 'DELETE',
     });
