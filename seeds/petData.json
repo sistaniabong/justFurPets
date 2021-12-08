@@ -4,10 +4,8 @@
     "pet_type": "cat",
     "pet_species": "smol",
     "pet_owner_id": 1,
-    "boarded": true,
     "check_in_date": "2021-01-14",
     "check_out_date": "2021-01-16",
-    "stay_duration": 5,
     "kennel_size": "s"
   },
   {
@@ -15,10 +13,8 @@
     "pet_type": "dog",
     "pet_species": "Great Dane",
     "pet_owner_id": 2,
-    "boarded": false,
     "check_in_date": "2021-01-15",
     "check_out_date": "2021-01-16",
-    "stay_duration": 1,
     "kennel_size": "l"
   },
   {
@@ -26,10 +22,8 @@
     "pet_type": "dog",
     "pet_species": "Chocolate Lab",
     "pet_owner_id": 3,
-    "boarded": true,
     "check_in_date": "2021-01-16",
     "check_out_date": "2021-01-23",
-    "stay_duration": 7,
     "kennel_size": "m"
   },
   {
@@ -37,10 +31,8 @@
     "pet_type": "bird",
     "pet_species": "Parrot",
     "pet_owner_id": 4,
-    "boarded": true,
     "check_in_date": "2021-01-16",
     "check_out_date": "2021-01-30",
-    "stay_duration": 14,
     "kennel_size": "s"
   },
   {
@@ -48,10 +40,8 @@
     "pet_type": "bird",
     "pet_species": "Parrot",
     "pet_owner_id": 4,
-    "boarded": true,
     "check_in_date":"2021-01-16",
     "check_out_date": "2021-01-22",
-    "stay_duration": 14,
     "kennel_size": "s"
   }
 ]
