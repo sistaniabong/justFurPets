@@ -25,6 +25,8 @@ createActivitySubmitButton.addEventListener('click', (event) => {
 
 
 const postActivity = async (newActivity) => {
+  const urlSearchParams = window.location.search;
+  const pet_id = urlSearchParams.split('=')[1]
   const response = await fetch('/api/scheduledActivity/', {
     method: 'POST',
     headers: {
@@ -32,9 +34,8 @@ const postActivity = async (newActivity) => {
     },
     body: JSON.stringify(newActivity),
   })
-  console.log(response)
 
   if (response.ok) {
-    document.location.replace('/');
+    document.location.replace(`/api/pet/${pet_id}`);
   }
 }

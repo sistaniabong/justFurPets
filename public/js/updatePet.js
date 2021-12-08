@@ -1,6 +1,5 @@
 console.log(document.getElementById('id').textContent)
 const updatePet = async (event) => {
-    // TODO: Add a comment describing the functionality of this statement
     console.log("button submitted")
     const petId = document.getElementById('id').textContent;
     const petName = document.querySelector("#name").value.trim();
