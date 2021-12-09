@@ -1,24 +1,37 @@
 const updatePet = async (event) => {
     const petId = document.getElementById('id').textContent;
     const petName = document.querySelector("#name").value.trim();
-    const type = document.querySelector("#type").value.trim();
+    let type = document.querySelector('.petTypeField').value.trim();
     const species = document.querySelector("#species").value.trim();
-    const ownerName = document.querySelector("#ownerName").value.trim();
-    const checkInDate = document.querySelector("#checkInDate") .value.trim();
-    const checkOutDate = document.querySelector("#checkOutDate").value.trim();
-    const kennelSize = document.querySelector("#kennelSize").value.trim();
+    const checkInDate = document.querySelector('.petCheckInField').value.trim();
+    const checkOutDate = document.querySelector('.petCheckOutField').value.trim();
+    let kennelSize = document.querySelector('.petKennelSizeField').value.trim();
+    if(type !== "Choose...")
+    {
+      type = document.querySelector('.petTypeField').value.trim();
+    }
+    else
+    {
+      type = '';
+    }
+    if(kennelSize !== "Choose...")
+    {
+      type = document.querySelector('.petKennelSizeField').value.trim();
+    }
+    else
+    {
+      kennelSize = '';
+    }
 
-
-    if (petName || type || species || ownerName || checkInDate || checkOutDate || kennelSize) 
+    if (petName || type || species || checkInDate || checkOutDate || kennelSize) 
     {
         const response = await fetch(`/api/pet/${petId}`, {
           method: 'PUT',
           body: JSON.stringify({
                 id: petId, 
                 pet_name: petName,
-                pet_type: type,
+                pet_type: type,               
                 pet_species: species,
-                pet_owner_id: ownerName,
                 check_in_date: checkInDate,
                 check_out_date: checkOutDate,
                 kennel_size: kennelSize
