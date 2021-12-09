@@ -90,9 +90,9 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
     // update a tag's name by its `id` value
+    console.log(req.body)
     try {
-      const ownerData = await PetOwner.findOne({ where: { owner_name: req.body.pet_owner_id } });
-      console.log(ownerData.id)
+      
       const petData = await Pet.update(
         {
           pet_name: req.body.pet_name,
