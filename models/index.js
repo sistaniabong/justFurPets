@@ -15,6 +15,7 @@ Pet.belongsTo(PetOwner, {
 
 ScheduledActivity.belongsTo(Pet, {
     foreignKey: 'pet_id',
+    onDelete: 'CASCADE'
 });
 
 Pet.hasMany(ScheduledActivity, {
