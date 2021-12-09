@@ -119,16 +119,14 @@ router.put('/:id', async (req, res) => {
   });
 
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async(req, res) => {
   try{
-    Pet.destroy({
+    const petData = await Pet.destroy({
       where: {
         id: req.params.id,
       },
     })
-      .then((deletedCategory) => {
-        res.json(deletedCategory);
-      })
+    res.status(200).json(petData);
   } catch (err) {
     res.status(400).json(err);
   }

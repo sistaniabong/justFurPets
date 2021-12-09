@@ -1,18 +1,15 @@
-console.log(document.getElementById('id').textContent)
 const updatePet = async (event) => {
-    console.log("button submitted")
     const petId = document.getElementById('id').textContent;
     const petName = document.querySelector("#name").value.trim();
     const type = document.querySelector("#type").value.trim();
     const species = document.querySelector("#species").value.trim();
     const ownerName = document.querySelector("#ownerName").value.trim();
-    const boarded = document.querySelector("#boarded").value.trim();
     const checkInDate = document.querySelector("#checkInDate") .value.trim();
     const checkOutDate = document.querySelector("#checkOutDate").value.trim();
     const kennelSize = document.querySelector("#kennelSize").value.trim();
 
 
-    if (petName || type || species || ownerName || boarded || checkInDate || checkOutDate || kennelSize) 
+    if (petName || type || species || ownerName || checkInDate || checkOutDate || kennelSize) 
     {
         const response = await fetch(`/api/pet/${petId}`, {
           method: 'PUT',
