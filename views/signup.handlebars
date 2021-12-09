@@ -1,14 +1,7 @@
 {{#unless logged_in}}
-<header id="toolbar">
-  <img src="https://cdn.onlinewebfonts.com/svg/img_74462.png">
-  <h1>JustFurPets</h1>
-  <nav>
-    <ul id="toolbarOpts">
-      <li><a href="/">Home Page</a></li>
-    </ul>
-  </nav>
-</header>
+{{> loggedOutHeader }}
 {{/unless}}
+
 
 <div class="h-100">
   <div class="col-md-12">
@@ -16,7 +9,7 @@
       <h2 id="loginTitle2" class="btnColor loginNoBtn">Sign Up</h2>
       <form class="form login-form">
         <div class="form-group">
-          <label for="email-login"class="signUpWidth"> email</label>
+          <label for="email-login"class="signUpWidth"> username</label>
           <input class="form-input" type="text" id="email-login" />
         </div>
         <div class="form-group">
@@ -28,7 +21,7 @@
           <input class="form-input" type="password" id="password-verify" />
         </div>
         <div class="form-group">
-          <button id="moreSpacebtn" class="btn btn-primary btnColor" type="submit">Sign Up</button>
+          <button id="signUp" class=" login-headers btn btn-primary fs-4 btnColor text-dark m-0 orangeBtn" type="submit">Signup</button>
         </div>
       </form>
   </div>
