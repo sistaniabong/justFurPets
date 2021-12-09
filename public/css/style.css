@@ -133,6 +133,10 @@ a{
     background-color: #60bfcf !important;
 }
 
+.adjustWidth{
+    width:90%;
+}
+
 .signUpWidth{
     width:120px;
     margin: 5px 0px;
@@ -335,9 +339,20 @@ max-width: 70%;
 
 .btnColor{
     text-align: center;
-    background-color: #e48365;
+    background-color: #9e8a84;
     border-radius: 5px;
     border-style: solid;
     border-color: #e48365;
     color: white;
+}
+
+@media screen and (max-width: 480px){
+    #homepage #title{
+        font-size: 65px;
+    }
+}
+
+.card-body{
+
+    background-color: white;
 }
