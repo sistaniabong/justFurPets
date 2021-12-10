@@ -1,13 +1,12 @@
-const loginFormHandler = async (event) => 
+const signUpFormHandler = async (event) => 
 {
   // TODO: Add a comment describing the functionality of this statement
   event.preventDefault();
 
   // TODO: Add a comment describing the functionality of these expressions
-  const email = document.querySelector('#email-login').value.trim();
-  const password = document.querySelector('#password-login').value.trim();
+  const email = document.querySelector('#email-signUp').value.trim();
+  const password = document.querySelector('#password-signUp').value.trim();
   const verifyPassword = document.querySelector('#password-verify').value.trim();
-  const signUp = document.querySelector('#password-login');
 
   if (email && password === verifyPassword) 
   {
@@ -29,6 +28,5 @@ const loginFormHandler = async (event) =>
     }
   }
 };
-document
-.querySelector('.login-form')
-.addEventListener('submit', loginFormHandler);
+
+$("#createAcct").click(signUpFormHandler)
