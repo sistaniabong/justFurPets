@@ -12,7 +12,6 @@ const newPetKennelSize = document.querySelector('.petKennelSizeField');
 
 createPetSubmitButton.addEventListener('click', (event) => {
   event.preventDefault;
-  console.log(pet_type, kennel_size)
   const petData = {
     pet_name: newPetName.value.trim(),
     pet_type: newPetType.value.trim(),

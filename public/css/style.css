@@ -209,12 +209,13 @@ a{
 
 #createPage #inputs
 {
-margin: 30px 300px 0px 300px;
+margin: 5% 20% 5% 20%;
 background-color: #a4cdd4;
 padding:15px;
 border: 4px solid #7dc5d1;
 border-radius: 25px;
 max-width: 70%;
+justify-content: center;
 }
 
 #createPage .createPetSubmit
@@ -364,9 +365,17 @@ max-width: 70%;
     #petProfile h3 {
         font-size: 20px;
     }
+    #createPage #inputs{
+    margin: 5% 5% 5% 5%;
+    }
+
+    #createPage #title{
+    font-size: 30px;
+    }
 }
 
 .card-body{
 
     background-color: white;
 }
+
