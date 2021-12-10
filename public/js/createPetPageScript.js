@@ -1,6 +1,5 @@
 const createPetSubmitButton = document.querySelector('.createPetSubmit');
 const createNewOwnerForm = document.querySelector('.new-petowner-form');
-
 const createNewOwnerButton = document.querySelector('#submitPetOwnerBtn');
 const newPetOwnerId = document.querySelector('.petOwnerField');
 const newPetName = document.querySelector('.petNameField');
@@ -10,18 +9,19 @@ const newPetCheckIn = document.querySelector('.petCheckInField');
 const newPetCheckOut = document.querySelector('.petCheckOutField');
 const newPetKennelSize = document.querySelector('.petKennelSizeField');
 
+
 createPetSubmitButton.addEventListener('click', (event) => {
   event.preventDefault;
+
   const petData = {
     pet_name: newPetName.value.trim(),
     pet_type: newPetType.value.trim(),
     pet_species: newPetSpecies.value.trim(),
     pet_owner_id: newPetOwnerId.value.trim(),
-    check_in_date: newPetCheckIn.value.trim(),
-    check_out_date: newPetCheckOut.value.trim(),
+    check_in_date: new Date (newPetCheckIn.value.trim().replace(/-/g, '\/')),
+    check_out_date: new Date (newPetCheckOut.value.trim().replace(/-/g, '\/')),
     kennel_size: newPetKennelSize.value.trim()
   }
-  console.log(petData)
   postPet(petData)
 })
 

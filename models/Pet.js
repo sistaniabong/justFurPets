@@ -33,12 +33,14 @@ Pet.init(
       }
     },
     check_in_date: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     check_out_date: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     kennel_size: {
       type: DataTypes.STRING(1),

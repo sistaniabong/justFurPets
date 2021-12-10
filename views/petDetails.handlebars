@@ -11,8 +11,8 @@
                 <p><b>Owner's phone:</b> {{pet.petOwner.phone_number.[0]}}{{pet.petOwner.phone_number.[1]}}{{pet.petOwner.phone_number.[2]}}-{{pet.petOwner.phone_number.[3]}}{{pet.petOwner.phone_number.[4]}}{{pet.petOwner.phone_number.[5]}}-{{pet.petOwner.phone_number.[6]}}{{pet.petOwner.phone_number.[7]}}{{pet.petOwner.phone_number.[8]}}{{pet.petOwner.phone_number.[9]}}</p>
                 <p><b>Pet Type:</b> {{pet.pet_type}}</p>
                 <p><b>Species:</b>  {{pet.pet_species}}</p>
-                <p><b>Check-In Date:</b> {{pet.check_in_date}}</p>
-                <p><b>Check-out Date:</b> {{pet.check_out_date}}</p>
+                <p><b>Check-In Date:</b> {{format_date pet.check_in_date}}</p>
+                <p><b>Check-out Date:</b> {{format_date pet.check_out_date}}</p>
                 <p><b>Kennel Size:</b> {{pet.kennel_size}}</p>
             </div>
             <div id="right-Column">
@@ -45,8 +45,8 @@
                 <p><b>Owner's phone:</b> {{pet.petOwner.phone_number.[0]}}{{pet.petOwner.phone_number.[1]}}{{pet.petOwner.phone_number.[2]}}-{{pet.petOwner.phone_number.[3]}}{{pet.petOwner.phone_number.[4]}}{{pet.petOwner.phone_number.[5]}}-{{pet.petOwner.phone_number.[6]}}{{pet.petOwner.phone_number.[7]}}{{pet.petOwner.phone_number.[8]}}{{pet.petOwner.phone_number.[9]}}</p>
                 <p><b>Pet Type:</b> <input size="10" id="type" type="text" value={{pet.pet_type}}></p>
                 <p><b>Species:</b>  <input size="10" id="species" type="text" value={{pet.pet_species}}></p>
-                <p><b>Check-In Date:</b> <input size="10" id="checkInDate" type="text" value={{pet.check_in_date}}></p>
-                <p><b>Check-out Date:</b> <input size="10" id="checkOutDate" type="text" value={{pet.check_out_date}}></p>
+                <p><b>Check-In Date:</b> <input size="10" id="checkInDate" type="text" value={{format_date pet.check_in_date}}></p>
+                <p><b>Check-out Date:</b> <input size="10" id="checkOutDate" type="text" value={{format_date pet.check_out_date}}></p>
                 <p><b>Kennel Size:</b> <input size="3" id="kennelSize" type="text" value={{pet.kennel_size}}></p>
             </div>
 
