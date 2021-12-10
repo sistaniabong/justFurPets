@@ -32,8 +32,9 @@ const updatePet = async (event) => {
                 pet_name: petName,
                 pet_type: type,               
                 pet_species: species,
-                check_in_date: checkInDate,
-                check_out_date: checkOutDate,
+                pet_owner_id: ownerName,
+                check_in_date: new Date (checkInDate.replace(/-/g, '\/')),
+                check_out_date: new Date (checkOutDate.replace(/-/g, '\/')),
                 kennel_size: kennelSize
             }),
           headers: { 'Content-Type': 'application/json' },
