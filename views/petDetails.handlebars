@@ -15,7 +15,7 @@
                 <p><b>Check-out Date:</b> {{format_date pet.check_out_date}}</p>
                 <p><b>Kennel Size:</b> {{pet.kennel_size}}</p>
             </div>
-            <div id="right-Column">
+            <div id="right-Column" style="overflow-y: auto;">
                 <div id="activityHeader"><h3>Activities:</h3><button id="addActivity">Add Activity</button></div>
                 {{#each activitys as |activity|}}
                 <div class="card">
@@ -41,13 +41,30 @@
                 <h3>Info:</h3>
                 <p><b size="3"  type="text" >Pet Number: </b><span id="id">{{pet.id}}</span></p>
                 <p><b>Pet's name:</b> <input size="10" id="name" type="text" value={{pet.pet_name}}></p></p>
-                <p><b>Owner's name:</b> <input size="10" id="ownerName" type="text" value={{pet.petOwner.owner_name}}></p>
+                <p><b>Owner's name:</b> <span id="ownerName">{{pet.petOwner.owner_name}}</span></p>
                 <p><b>Owner's phone:</b> {{pet.petOwner.phone_number.[0]}}{{pet.petOwner.phone_number.[1]}}{{pet.petOwner.phone_number.[2]}}-{{pet.petOwner.phone_number.[3]}}{{pet.petOwner.phone_number.[4]}}{{pet.petOwner.phone_number.[5]}}-{{pet.petOwner.phone_number.[6]}}{{pet.petOwner.phone_number.[7]}}{{pet.petOwner.phone_number.[8]}}{{pet.petOwner.phone_number.[9]}}</p>
-                <p><b>Pet Type:</b> <input size="10" id="type" type="text" value={{pet.pet_type}}></p>
+                <p><b>Pet Type:</b> 
+                    <select class="custom-select customprepend petTypeField" id="inputGroupSelect01">
+                        <option selected>{{pet.pet_type}}</option>
+                        <option value="cat">Cat</option>
+                        <option value="dog">Dog</option>
+                        <option value="bird">Bird</option>
+                        <option value="others">Others</option>
+                    </select>
+                </p>
                 <p><b>Species:</b>  <input size="10" id="species" type="text" value={{pet.pet_species}}></p>
-                <p><b>Check-In Date:</b> <input size="10" id="checkInDate" type="text" value={{format_date pet.check_in_date}}></p>
-                <p><b>Check-out Date:</b> <input size="10" id="checkOutDate" type="text" value={{format_date pet.check_out_date}}></p>
-                <p><b>Kennel Size:</b> <input size="3" id="kennelSize" type="text" value={{pet.kennel_size}}></p>
+                <p><b>Check-In Date:</b> <input value={{format_date pet.check_in_date}} type="date" data-format-string="YYYY MM DD" class="form-control customprepend petCheckInField" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"></p>
+                <p><b>Check-out Date:</b> <input value={{format_date pet.check_out_date}} type="date" class="form-control customprepend petCheckOutField" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"></p>
+                <p><b>Kennel Size:</b> 
+                    <select class="custom-select customprepend petKennelSizeField" id="inputGroupSelect01">
+                        <option selected>{{pet.kennel_size}}</option>
+                        <option value="s">Small</option>
+                        <option value="m">Medium</option>
+                        <option value="l">Large</option>
+                    </select>
+                </p>
             </div>
 
         </div>

@@ -1,14 +1,7 @@
 {{#unless logged_in}}
-<header id="toolbar">
-  <img src="https://cdn.onlinewebfonts.com/svg/img_74462.png">
-  <h1>JustFurPets</h1>
-  <nav>
-    <ul id="toolbarOpts">
-      <li><a href="/">Home Page</a></li>
-    </ul>
-  </nav>
-</header>
+{{> loggedOutHeader }}
 {{/unless}}
+
 
 
 <div class="h-100 row d-flex">
@@ -19,15 +12,15 @@
         <form class="form login-form">
           <div class="form-group">
             <label for="email-login" class=" login-headers fs-4 btnColor loginNoBtn text-dark">User Name:</label>
-            <input class="form-input fs-4 text-dark" type="text" id="email-login" />
+            <input class="form-input fs-4 text-dark adjustWidth" type="text" id="email-login" />
           </div>
           <div class="form-group">
             <label  for="password-login" class="login-headers fs-4 btnColor loginNoBtn text-dark">Password:</label>
-            <input class="form-input fs-4 text-dark" type="password" id="password-login" />
+            <input class="form-input fs-4 text-dark adjustWidth" type="password" id="password-login" />
           </div>
           <div class="form-group">
-            <button class="login-headers btn btn-primary fs-4 btnColor text-dark m-0" type="submit">login</button>
-            <button id="signUp" class=" login-headers btn btn-primary fs-4 btnColor text-dark m-0" type="button">signup</button>
+            <button class="login-headers btn btn-primary fs-4 btnColor text-dark m-0 orangeBtn" type="submit">Login</button>
+            <button id="signUp" class=" login-headers btn btn-primary fs-4 btnColor text-dark m-0 orangeBtn" type="button">Signup</button>
           </div>
         </form>
       </div>

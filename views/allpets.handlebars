@@ -1,13 +1,5 @@
 {{#unless logged_in}}
-<header id = "toolbar">
-    <img src="https://cdn.onlinewebfonts.com/svg/img_74462.png">
-    <h1>JustFurPets</h1>
-    <nav>          
-        <ul id = "toolbarOpts">
-        <li><a href="/">Home Page</a></li>
-        </ul>
-    </nav>
-</header>
+{{> loggedOutHeader }}
 {{/unless}}
 
 <div class="container allpets">
