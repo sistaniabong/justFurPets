@@ -42,13 +42,16 @@ router.get('/', withAuth, async(req,res) => {
         petsWithNoActivities.push(petActivities[i].pet_name)
       }
     }
+    let activityNumbers = [petActivities.length+1 - petsWithNoActivities.length, petsWithNoActivities.length+1 ]
+    console.log(activityNumbers)
     res.render('analytics',
     {
       total_pet:totalPetData[0].total_count,
       total_activity:totalPetActivity[0].total_activity,
       pet_count:pet_counts,
       logged_in: req.session.logged_in,
-      petsWithNoActivities
+      petsWithNoActivities,
+      activityNumbers
     });
   } catch(err){
     console.log(err)

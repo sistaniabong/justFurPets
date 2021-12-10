@@ -1,0 +1,59 @@
+<div class="col">
+<div class="card text-dark bg-light" style="width: 20rem;margin-top:20px">  
+    <div class="card-header">Activity Count</div>
+    <div class="card-body">
+    <div class="chart-container">
+    <div class="pie-chart-container">
+    <canvas id="pie-chartcanvas-1"></canvas>
+    </div>
+    </div>
+    <script>
+let activityNumbers = [{{parameter}}];
+console.log(activityNumbers)
+var ctx1 = $("#pie-chartcanvas-1");
+var data = {
+    labels: ["PetWithActivity", "PetWithoutActivity"],
+    datasets: [
+      {
+        label: "Activity Data",
+        data: activityNumbers,
+        backgroundColor: [
+          "#DEB887",
+          "#A9A9A9",
+        ],
+        borderColor: [
+          "#CDA776",
+          "#989898",
+        ],
+        borderWidth: [1, 1]
+      }
+    ]
+  };
+
+  var options = {
+    responsive: true,
+    title: {
+      display: true,
+      position: "top",
+      text: "Pie Chart",
+      fontSize: 18,
+      fontColor: "#111"
+    },
+    legend: {
+      display: true,
+      position: "bottom",
+      labels: {
+        fontColor: "#333",
+        fontSize: 16
+      }
+    }
+  };
+  var chart1 = new Chart(ctx1, {
+    type: "pie",
+    data: data,
+    options: options
+  });
+    </script>
+    </div>
+</div>
+</div>
