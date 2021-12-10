@@ -12,15 +12,15 @@ const updatePet = async (event) => {
     }
     else
     {
-      type = '';
+      type = null;
     }
     if(kennelSize !== "Choose...")
     {
-      type = document.querySelector('.petKennelSizeField').value.trim();
+      kennelSize = document.querySelector('.petKennelSizeField').value.trim();
     }
     else
     {
-      kennelSize = '';
+      kennelSize = null;
     }
 
     if (petName || type || species || checkInDate || checkOutDate || kennelSize) 
