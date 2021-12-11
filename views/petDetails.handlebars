@@ -53,9 +53,9 @@
                     </select>
                 </p>
                 <p><b>Species:</b>  <input size="10" id="species" type="text" value={{pet.pet_species}}></p>
-                <p><b>Check-In Date:</b> <input value={{format_date pet.check_in_date}} type="date" data-format-string="YYYY MM DD" class="form-control customprepend petCheckInField" aria-label="Sizing example input"
+                <p><b>Check-In Date:</b> <input value={{format_date_value_display pet.check_in_date}} type="date" data-format-string="YYYY MM DD" class="form-control customprepend petCheckInField" aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-default"></p>
-                <p><b>Check-out Date:</b> <input value={{format_date pet.check_out_date}} type="date" class="form-control customprepend petCheckOutField" aria-label="Sizing example input"
+                <p><b>Check-out Date:</b> <input value={{format_date_value_display pet.check_out_date}} type="date" class="form-control customprepend petCheckOutField" aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-default"></p>
                 <p><b>Kennel Size:</b> 
                     <select class="custom-select customprepend petKennelSizeField" id="inputGroupSelect01">

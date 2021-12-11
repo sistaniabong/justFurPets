@@ -22,6 +22,7 @@ router.get('/', withAuth, async (req, res) => {
       attributes: [[sequelize.fn('count', sequelize.col('id')), 'total_count']],
       raw: true,
     });
+<<<<<<< HEAD
     ///////////////////TOP
     const allDates = await Pet.findAll({
       attributes: [[sequelize.fn('max', sequelize.col('check_out_date')), 'max_date']],
@@ -46,6 +47,16 @@ router.get('/', withAuth, async (req, res) => {
 
 
     const activityData = await Pet.findAll({
+=======
+
+
+    const totalPetActivity = await ScheduledActivity.findAll({  	
+      attributes: [[sequelize.fn('count', sequelize.col('id')), 'total_activity']],
+      raw: true,
+    });
+
+    const activityData = await Pet.findAll({  	
+>>>>>>> bfdff60fb3ee22c70ed7be2e440cadd588302580
       include: [
         {
           model: ScheduledActivity,
@@ -54,13 +65,31 @@ router.get('/', withAuth, async (req, res) => {
       ],
     });
 
+
     const petActivities = activityData.map((activity) => activity.get({ plain: true }));
     let petsWithNoActivities = [];
+<<<<<<< HEAD
     for (let i = 0; i < petActivities.length; i++) {
       if (petActivities[i].scheduledActivities == "") {
+=======
+    let petsActivitiesNum=0;
+    let petWithMostActivities=[];
+    for(let i = 0; i < petActivities.length; i++)
+    {
+      if(petActivities[i].scheduledActivities == "")
+      {
+>>>>>>> bfdff60fb3ee22c70ed7be2e440cadd588302580
         petsWithNoActivities.push(petActivities[i].pet_name)
+        
       }
+      if(petActivities[i].scheduledActivities.length > petsActivitiesNum){
+        petsActivitiesNum=petActivities[i].scheduledActivities.length;
+        petWithMostActivities=petActivities[i];
+      }
+      
+     
     }
+<<<<<<< HEAD
     let activityNumbers = [petActivities.length + 1 - petsWithNoActivities.length, petsWithNoActivities.length + 1]
     res.render('analytics',
       {
@@ -74,6 +103,29 @@ router.get('/', withAuth, async (req, res) => {
 
       });
   } catch (err) {
+=======
+
+    let busiestPet= petWithMostActivities.pet_name;
+
+
+    let activityNumbers = [petActivities.length - petsWithNoActivities.length, petsWithNoActivities.length ]
+
+    res.render('analytics',
+    {
+      total_pet:totalPetData[0].total_count,
+      total_activity:totalPetActivity[0].total_activity,
+      pet_count:pet_counts,
+      logged_in: req.session.logged_in,
+      logged_in: req.session.logged_in,
+      petsWithNoActivities,
+      activityNumbers,
+      busiestPet,
+      petsWithNoActivities,
+      activityNumbers
+      
+    });
+  } catch(err){
+>>>>>>> bfdff60fb3ee22c70ed7be2e440cadd588302580
     console.log(err)
   }
 
