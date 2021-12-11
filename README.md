@@ -90,4 +90,4 @@ To deploy this web application, please visit the following [Deployed Application
 To view our wireframe of the application, please visit the following [Wireframe](https://app.diagrams.net/#G1SwBIgeZEFHQQsWg6lTAp4p64fP13I1uB).
 
 ## Mock-Up
-To review a demo of our application, JustFurPets click the following link: [JustFurPets Demo](https://watch.screencastify.com/v/8DiXYKgQLoXM1pmpuA3q).
+To review a demo of our application, JustFurPets click the following link: [JustFurPets Demo](https://watch.screencastify.com/v/cfX9tYCG1P5l71olIJDf).
