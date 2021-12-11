@@ -1,38 +1,56 @@
 const router = require('express').Router();
+const { NOW } = require('sequelize/dist');
 const sequelize = require('../../config/connection');
 const { Pet, PetOwner, User, ScheduledActivity } = require('../../models');
+const { max } = require('../../models/Pet');
 const withAuth = require('../../utils/auth');
 
 
-router.get('/', withAuth, async(req,res) => {
+
+router.get('/', withAuth, async (req, res) => {
   try {
-    const petsData = await Pet.findAll({  	
+    const petsData = await Pet.findAll({
       attributes: ['pet_type', [sequelize.fn('count', sequelize.col('pet_type')), 'count']],
-      group : ['pet.pet_type'],
+      group: ['pet.pet_type'],
       raw: true,
       order: [['pet_type', 'ASC']]
     });
 
     const pet_counts = petsData.map((pet) => pet.count);
 
-    const totalPetData = await Pet.findAll({  	
+    const totalPetData = await Pet.findAll({
       attributes: [[sequelize.fn('count', sequelize.col('id')), 'total_count']],
       raw: true,
     });
 
+    const allDates = await Pet.findAll({
+      attributes: [[sequelize.fn('max', sequelize.col('check_out_date')), 'max_date']],
+      raw: true,
+    });
 
-    const totalPetActivity = await ScheduledActivity.findAll({  	
+    let today = new Date();
+
+    var Difference_In_Time = (allDates[0].max_date).getTime() - today.getTime();
+
+
+    var Difference_In_Days = Math.floor(Difference_In_Time / (1000 * 3600 * 24));
+  
+
+    const totalPetActivity = await ScheduledActivity.findAll({
       attributes: [[sequelize.fn('count', sequelize.col('id')), 'total_activity']],
       raw: true,
     });
 
-    const activityData = await Pet.findAll({  	
+
+
+
+    const activityData = await Pet.findAll({
       include: [
         {
           model: ScheduledActivity,
           attributes: ['activity_description'],
         },
-      ],     
+      ],
     });
 
 
@@ -56,41 +74,30 @@ router.get('/', withAuth, async(req,res) => {
     }
 
     let busiestPet= petWithMostActivities.pet_name;
+
+
     let activityNumbers = [petActivities.length - petsWithNoActivities.length, petsWithNoActivities.length ]
-
-
-    const totalPetbyMonth = await Pet.findAll({  	
-      attributes: [[sequelize.fn('MONTH', sequelize.col('check_in_date')), 'month'],[sequelize.fn('count', sequelize.col('id')), 'total_count']],
-      group: [sequelize.fn('MONTH', sequelize.col('check_in_date')), 'month'],
-      raw: true,
-      order: [[sequelize.fn('MONTH', sequelize.col('check_in_date')), 'ASC']]
-    });
-    let month_counts = [0,0,0,0,0,0,0,0,0,0,0,0]
-    for (let i=0;i<totalPetbyMonth.length;i++){
-      
-      let month = totalPetbyMonth[i].month;
-      let month_index=month-1;
-      month_counts[month_index]=totalPetbyMonth[i].total_count
-    }
 
     res.render('analytics',
     {
       total_pet:totalPetData[0].total_count,
       total_activity:totalPetActivity[0].total_activity,
       pet_count:pet_counts,
+      max_stay: Difference_In_Days,
       logged_in: req.session.logged_in,
       logged_in: req.session.logged_in,
       petsWithNoActivities,
       activityNumbers,
       busiestPet,
       petsWithNoActivities,
-      activityNumbers,
-      month_counts
+      activityNumbers
+      
     });
   } catch(err){
     console.log(err)
   }
-    
-  });
 
-module.exports=router;
+});
+
+
+module.exports = router;
