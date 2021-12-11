@@ -80,10 +80,6 @@ This pet daycare management system includes the following features:
 ## Technologies
 This application is written in HTML, CSS, and JavaScript.  It uses bootstrap for CSS components.  It also uses the following JavaScript packages: Expresss, Express-Session, Express-Handlebars and Sequelize.
 
-## Mock-Up
-The following GIF displays the web application's appearance and functionality:
-<!-- ![JustFurPets demo](./assets/images/meal-prep.gif) -->
-
 ## Review
 To review the refactored code, please go to the [Repository](https://github.com/sistaniabong/justFurPets).
 
@@ -92,3 +88,6 @@ To deploy this web application, please visit the following [Deployed Application
 
 ## Wireframe
 To view our wireframe of the application, please visit the following [Wireframe](https://app.diagrams.net/#G1SwBIgeZEFHQQsWg6lTAp4p64fP13I1uB).
+
+## Mock-Up
+To review a demo of our application, JustFurPets click the following link: [JustFurPets Demo](https://watch.screencastify.com/v/8DiXYKgQLoXM1pmpuA3q).
