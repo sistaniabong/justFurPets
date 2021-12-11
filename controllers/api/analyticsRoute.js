@@ -20,23 +20,11 @@ router.get('/', withAuth, async(req,res) => {
       raw: true,
     });
 
+
     const totalPetActivity = await ScheduledActivity.findAll({  	
       attributes: [[sequelize.fn('count', sequelize.col('id')), 'total_activity']],
       raw: true,
     });
-
-
-    //Vince's 
-    // const petDates = await Pet.findAll({
-    //   attributes: [[sequelize.fn('date', sequelize.col("id")), 'check_out_date' ]],
-    //   raw:true,
-    // });
-
-    // console.log(petDates);
-    // console.log(totalPetData);
-
-////end
-
 
     const activityData = await Pet.findAll({  	
       include: [
@@ -47,22 +35,41 @@ router.get('/', withAuth, async(req,res) => {
       ],     
     });
 
+
     const petActivities = activityData.map((activity) => activity.get({ plain: true }));
     let petsWithNoActivities = [];
+    let petsActivitiesNum=0;
+    let petWithMostActivities=[];
     for(let i = 0; i < petActivities.length; i++)
     {
       if(petActivities[i].scheduledActivities == "")
       {
         petsWithNoActivities.push(petActivities[i].pet_name)
+        
       }
+      if(petActivities[i].scheduledActivities.length > petsActivitiesNum){
+        petsActivitiesNum=petActivities[i].scheduledActivities.length;
+        petWithMostActivities=petActivities[i];
+      }
+      
+     
     }
-    let activityNumbers = [petActivities.length+1 - petsWithNoActivities.length, petsWithNoActivities.length+1 ]
+
+    let busiestPet= petWithMostActivities.pet_name;
+
+
+    let activityNumbers = [petActivities.length - petsWithNoActivities.length, petsWithNoActivities.length ]
+
     res.render('analytics',
     {
       total_pet:totalPetData[0].total_count,
       total_activity:totalPetActivity[0].total_activity,
       pet_count:pet_counts,
       logged_in: req.session.logged_in,
+      logged_in: req.session.logged_in,
+      petsWithNoActivities,
+      activityNumbers,
+      busiestPet,
       petsWithNoActivities,
       activityNumbers
       
