@@ -15,10 +15,10 @@
                 <p><b>Check-out Date:</b> {{format_date pet.check_out_date}}</p>
                 <p><b>Kennel Size:</b> {{pet.kennel_size}}</p>
             </div>
-            <div id="right-Column" style="overflow-y: auto;">
+            <div id="right-Column" style="overflow-y: auto;" class="col-sm-6">
                 <div id="activityHeader"><h3>Activities:</h3><button id="addActivity">Add Activity</button></div>
                 {{#each activitys as |activity|}}
-                <div class="card">
+                <div class="card w-99">
                     <div class="card-body rounded border border-dark border-3" style="background-color: #e48365;">
                         <h5 class="card-title rounded border border-dark border-3 text-center" style="background-color: #7dc5d1;">{{activity.activity_type}}</h5>
                         <p class="d-flex">{{activity.activity_description}}</p>
