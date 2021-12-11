@@ -33,7 +33,7 @@ router.get('/', withAuth, async (req, res) => {
     var Difference_In_Time = (allDates[0].max_date).getTime() - today.getTime();
 
 
-    var Difference_In_Days = Math.floor(Difference_In_Time / (1000 * 3600 * 24));
+    var Difference_In_Days = Math.ceil(Difference_In_Time / (1000 * 3600 * 24));
   
 
     const totalPetActivity = await ScheduledActivity.findAll({
