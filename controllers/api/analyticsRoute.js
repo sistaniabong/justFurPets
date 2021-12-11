@@ -83,6 +83,7 @@ router.get('/', withAuth, async (req, res) => {
       total_pet:totalPetData[0].total_count,
       total_activity:totalPetActivity[0].total_activity,
       pet_count:pet_counts,
+      max_stay: Difference_In_Days,
       logged_in: req.session.logged_in,
       logged_in: req.session.logged_in,
       petsWithNoActivities,
