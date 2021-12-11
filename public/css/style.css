@@ -393,6 +393,33 @@ justify-content: center;
        padding-bottom: 0px;
        margin-bottom: 0px;
    }
+
+   nav{
+       padding-bottom: 2px;
+       padding-top: 5px;
+   }
+
+   nav ul{
+       padding:0px; 
+   }
+
+   .toolbar2{
+    display: flex !important;
+    padding-bottom: 5px;
+
+   }
+   .row{width:60%}
+
+   #loginGroup2{
+       display: flex;
+        flex-direction: column;
+   }
+
+   #loginTitle2{
+       font-size: 30px !important; 
+       max-width: 99%;
+
+   }
 }
 
 .card-body{
