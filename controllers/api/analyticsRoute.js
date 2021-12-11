@@ -78,6 +78,23 @@ router.get('/', withAuth, async (req, res) => {
 
     let activityNumbers = [petActivities.length - petsWithNoActivities.length, petsWithNoActivities.length ]
 
+    const totalPetbyMonth = await Pet.findAll({  	
+      attributes: [[sequelize.fn('MONTH', sequelize.col('check_in_date')), 'month'],[sequelize.fn('count', sequelize.col('id')), 'total_count']],
+      group: [sequelize.fn('MONTH', sequelize.col('check_in_date')), 'month'],
+      raw: true,
+      order: [[sequelize.fn('MONTH', sequelize.col('check_in_date')), 'ASC']]
+    });
+    let month_counts = [0,0,0,0,0,0,0,0,0,0,0,0]
+    for (let i=0;i<totalPetbyMonth.length;i++){
+      
+      let month = totalPetbyMonth[i].month;
+      let month_index=month-1;
+      month_counts[month_index]=totalPetbyMonth[i].total_count
+    }
+
+
+
+
     res.render('analytics',
     {
       total_pet:totalPetData[0].total_count,
@@ -90,8 +107,8 @@ router.get('/', withAuth, async (req, res) => {
       activityNumbers,
       busiestPet,
       petsWithNoActivities,
-      activityNumbers
-      
+      activityNumbers,
+      month_counts
     });
   } catch(err){
     console.log(err)
