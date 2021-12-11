@@ -84,10 +84,10 @@ This application is written in HTML, CSS, and JavaScript.  It uses bootstrap for
 To review the refactored code, please go to the [Repository](https://github.com/sistaniabong/justFurPets).
 
 ## Deploy
-To deploy this web application, please visit the following [Deployed Application](################).
+To deploy this web application, please visit the following [Deployed Application](https://just-fur-pets.herokuapp.com/api/pet).
 
 ## Wireframe
 To view our wireframe of the application, please visit the following [Wireframe](https://app.diagrams.net/#G1SwBIgeZEFHQQsWg6lTAp4p64fP13I1uB).
 
 ## Mock-Up
-To review a demo of our application, JustFurPets click the following link: [JustFurPets Demo](https://watch.screencastify.com/v/8DiXYKgQLoXM1pmpuA3q).
+To review a demo of our application, JustFurPets click the following link: [JustFurPets Demo](https://watch.screencastify.com/v/cfX9tYCG1P5l71olIJDf).

@@ -237,7 +237,7 @@ justify-content: center;
 
 
 
-/* Create Pet Owner */
+/* Css styles for the Create Pet Owner */
 #createPetOwnerBtn, #submitPetOwnerBtn{
     background-color: #e48365;
     border-radius: 5px;
@@ -348,6 +348,13 @@ justify-content: center;
     color: white;
 }
 
+.card-body{
+
+    background-color: white;
+}
+
+#flex{display: flex;}
+
 @media screen and (max-width: 480px){
     #homepage #title{
         font-size: 65px;
@@ -422,10 +429,5 @@ justify-content: center;
    }
 }
 
-.card-body{
 
-    background-color: white;
-}
-
-#flex{display: flex;}
 
