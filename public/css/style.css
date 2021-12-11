@@ -155,7 +155,7 @@ a{
 }
 
 #toolbarOpts{
-    display: flex; 
+    display: flex;
     justify-content: space-between; 
     list-style-type: none; 
     font-size: 25px; 
@@ -372,10 +372,33 @@ justify-content: center;
     #createPage #title{
     font-size: 30px;
     }
+
+    #toolbar{
+        display: block;
+        width: 100%;
+        margin:0 auto;
+    }
+    #toolbarOpts{
+        display: inline;
+        flex-direction: vertical;
+
+    }
+    #toolbarOpts li{
+        margin-left: 15px;
+    }
+   #logout{
+       padding-bottom: 10px;    
+   }
+   #toolbar img, #toolbar h1{
+       padding-bottom: 0px;
+       margin-bottom: 0px;
+   }
 }
 
 .card-body{
 
     background-color: white;
 }
+
+#flex{display: flex;}
 
