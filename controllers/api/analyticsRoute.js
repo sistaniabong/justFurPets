@@ -16,7 +16,24 @@ router.get('/', withAuth, async (req, res) => {
       order: [['pet_type', 'ASC']]
     });
 
-    const pet_counts = petsData.map((pet) => pet.count);
+    const pet_types = petsData.map((pet) => pet.pet_type);
+
+    let pet_counts = [0,0,0,0]
+    for (let i=0;i<petsData.length;i++){
+      let pet_count = petsData[i].count;
+      if (pet_types[i]=='bird'){
+        pet_counts[0]=pet_count
+      }
+      if (pet_types[i]=='cat'){
+        pet_counts[1]=pet_count
+      }
+      if (pet_types[i]=='dog'){
+        pet_counts[2]=pet_count
+      }
+      if (pet_types[i]=='others'){
+        pet_counts[3]=pet_count
+      }
+    }
 
     const totalPetData = await Pet.findAll({
       attributes: [[sequelize.fn('count', sequelize.col('id')), 'total_count']],
