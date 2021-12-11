@@ -19,7 +19,7 @@ router.get('/', withAuth, async(req,res) => {
       attributes: [[sequelize.fn('count', sequelize.col('id')), 'total_count']],
       raw: true,
     });
-    // console.log(totalPetData[0].total_count)
+
 
     const totalPetActivity = await ScheduledActivity.findAll({  	
       attributes: [[sequelize.fn('count', sequelize.col('id')), 'total_activity']],
@@ -54,6 +54,7 @@ router.get('/', withAuth, async(req,res) => {
       
      
     }
+
     let busiestPet= petWithMostActivities.pet_name;
 
 
@@ -71,12 +72,12 @@ router.get('/', withAuth, async(req,res) => {
       busiestPet,
       petsWithNoActivities,
       activityNumbers
+      
     });
   } catch(err){
     console.log(err)
   }
     
   });
-
 
 module.exports=router;
